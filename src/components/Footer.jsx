@@ -33,7 +33,7 @@ const Footer = () => {
   return (
     <div>
       <footer className="bg-gradient-to-b from-stone-900 to-amber-950 text-amber-200 top-0">
-        <div className="footer-container bg-gradient-to-b from-stone-900 to-amber-950 text-amber-200 relative">
+        <div className="footer-container bg-gradient-to-b from-stone-900 to-amber-950 text-amber-200 relative overflow-hidden w-screen">
           <div className="camel absolute top-[-102px] left-0 animate-walk">
             <img
               src="https://media.tenor.com/PBC-LtbDN9IAAAAi/chariot-ride.gif"

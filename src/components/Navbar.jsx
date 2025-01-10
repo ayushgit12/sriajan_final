@@ -10,6 +10,7 @@ import {
   Users,
   Crown,
 } from "lucide-react";
+import logo from "/logo.png"; // Adjust the path if the file is not in the public folder
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,23 +82,25 @@ const Navbar = () => {
       <div className="relative">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 via-red-500 to-amber-400" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className=" flex items-center justify-between h-20">
             {/* Logo */}
             <div
-              className="flex-shrink-0 flex items-center group cursor-pointer"
+              className="  flex-shrink-0  flex items-center group cursor-pointer"
               onMouseEnter={() => setHoverEffect(generateRandomGlowColor())}
               onMouseLeave={() => setHoverEffect("")}
             >
-              <Scroll
-                className={`h-12 w-12 transition-all duration-500 ${
+              <img
+                src={logo} // Adjust the path if the file is not in the public folder
+                alt="Srijan Logo"
+                className={`h-36 w-40  object-contain transition-all duration-500 ${
                   scrolled ? "rotate-12" : ""
                 } group-hover:scale-110 ${
                   hoverEffect
-                    ? `text-${hoverEffect}-400 animate-pulse`
-                    : "text-amber-300"
+                    ? `shadow-[0_0_10px_theme(colors.${hoverEffect}.400)]`
+                    : "shadow-amber-300"
                 }`}
               />
-              <div className="ml-3 font-serif">
+              {/* <div className="ml-3 font-serif">
                 <span
                   className={`text-2xl font-bold transition-colors duration-300 ${
                     hoverEffect ? `text-${hoverEffect}-400` : "text-amber-300"
@@ -108,7 +111,7 @@ const Navbar = () => {
                 <span className="block text-xs text-amber-400/80 group-hover:text-amber-300">
                   GLORIA · VIRTUS · HONOR
                 </span>
-              </div>
+              </div> */}
             </div>
 
             <div className="hidden md:block">
