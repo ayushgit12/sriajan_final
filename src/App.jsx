@@ -1,18 +1,18 @@
-import { useState } from "react";
-
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Landingpage from "./components/Landing";
 import Footer from "./components/Footer";
+import Signup from "./components/signup";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
+    <Router>
       <Navbar />
-      <Landingpage />
+      <Routes>
+        <Route path="/" element={<Landingpage />} />
+        <Route path="/register" element={<Signup />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 

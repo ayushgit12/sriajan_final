@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import {
   Menu,
   X,
@@ -9,7 +10,6 @@ import {
   Users,
   Crown,
 } from "lucide-react";
-// import WalkingCamel from "./WalkingCamel";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,26 +35,31 @@ const Navbar = () => {
       name: "Home",
       icon: <Crown className="w-5 h-5" />,
       description: "Return to glory",
+      route: "/",
     },
     {
       name: "Events",
       icon: <Sword className="w-5 h-5" />,
       description: "Epic battles await",
-    },
-    {
-      name: "Arena",
-      icon: <Shield className="w-5 h-5" />,
-      description: "Enter the colosseum",
+      route: "/events",
     },
     {
       name: "Legion",
       icon: <Users className="w-5 h-5" />,
       description: "Join the ranks",
+      route: "/legion",
     },
     {
-      name: "patrons",
+      name: "Patrons",
       icon: <Flame className="w-5 h-5" />,
-      description: "pillars of festival",
+      description: "Pillars of the festival",
+      route: "/patrons",
+    },
+    {
+      name: "Registrum",
+      icon: <Shield className="w-5 h-5" />,
+      description: "Enter the colosseum",
+      route: "/register", // Add the correct route for registration
     },
   ];
 
@@ -77,7 +82,7 @@ const Navbar = () => {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 via-red-500 to-amber-400" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Logoo */}
+            {/* Logo */}
             <div
               className="flex-shrink-0 flex items-center group cursor-pointer"
               onMouseEnter={() => setHoverEffect(generateRandomGlowColor())}
@@ -108,10 +113,10 @@ const Navbar = () => {
 
             <div className="hidden md:block">
               <div className="ml-10 flex items-center space-x-6">
-                {navItems.map(({ name, icon, description }) => (
+                {navItems.map(({ name, icon, description, route }) => (
                   <div key={name} className="group relative">
-                    <a
-                      href={`#${name.toLowerCase()}`}
+                    <Link
+                      to={route} // Use Link instead of anchor <a> for routing
                       onClick={() => setActiveSection(name.toLowerCase())}
                       className={`flex items-center space-x-2 px-4 py-2 text-lg font-serif tracking-wider transition-all duration-300 relative
                         ${activeSection === name.toLowerCase() ? "text-amber-400" : "text-amber-200 hover:text-amber-400"}`}
@@ -121,12 +126,11 @@ const Navbar = () => {
                       </span>
                       <span>{name}</span>
 
-                      {/* Animated underline */}
                       <span
                         className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-amber-400 to-red-400 transition-all duration-300
                         ${activeSection === name.toLowerCase() ? "w-full" : "w-0 group-hover:w-full"}`}
                       />
-                    </a>
+                    </Link>
 
                     <div
                       className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-amber-900/90 text-amber-200 
@@ -170,10 +174,10 @@ const Navbar = () => {
           }`}
         >
           <div className="px-2 pt-2 pb-3 space-y-1 bg-gradient-to-b from-amber-900 to-red-900 border-t border-amber-400/20">
-            {navItems.map(({ name, icon, description }) => (
-              <a
+            {navItems.map(({ name, icon, description, route }) => (
+              <Link
                 key={name}
-                href={`#${name.toLowerCase()}`}
+                to={route} // Use Link here as well for routing
                 onClick={() => {
                   setActiveSection(name.toLowerCase());
                   setIsOpen(false);
@@ -194,7 +198,7 @@ const Navbar = () => {
                 <span className="text-xs text-amber-400/60 mt-1 ml-8">
                   {description}
                 </span>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
