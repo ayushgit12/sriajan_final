@@ -9,6 +9,7 @@ import {
   Flame,
   Users,
   Crown,
+  BookOpenText,
 } from "lucide-react";
 import logo from "/logo.png"; // Adjust the path if the file is not in the public folder
 
@@ -53,14 +54,20 @@ const Navbar = () => {
     {
       name: "Merchandise",
       icon: <Flame className="w-5 h-5" />,
-      description: "Pillars of the festival",
+      description: "view the merces ",
       route: "/merchandise",
     },
+    // {
+    //   name: "Team",
+    //   icon: <Shield className="w-5 h-5" />,
+    //   description: "Enter the legion",
+    //   route: "/team", // Add the correct route for registration
+    // },
     {
-      name: "Registrum",
-      icon: <Shield className="w-5 h-5" />,
-      description: "Enter the colosseum",
-      route: "/register", // Add the correct route for registration
+      name: "About",
+      icon: <BookOpenText className="w-5 h-5" />,
+      description: "De Nobis",
+      route: "/about", // Add the correct route for registration
     },
   ];
 
