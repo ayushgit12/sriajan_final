@@ -1,8 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import './Carousel.css';
 
 const Carousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === items.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval); // Clean up the interval on component unmount
+  }, [items.length]);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
@@ -17,11 +28,12 @@ const Carousel = ({ items }) => {
   };
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden border-4 border-blacky">
       <div
-        className="w-full h-64 md:h-96 flex transition-transform duration-700"
+        className="flex transition-transform duration-1000 carousel-image"
         style={{
-          transform: `translateX(-${currentIndex * 100}%)`,
+          width: `${items.length * 100}vw`, // Dynamically set the width based on the number of images
+          transform: `translateX(-${currentIndex * 50}%)`
         }}
       >
         {items.map((item, index) => (
@@ -29,7 +41,7 @@ const Carousel = ({ items }) => {
             key={index}
             src={item}
             alt={`Slide ${index + 1}`}
-            className="w-full h-full object-cover"
+            className="w-screen object-fill" // Use w-screen to take full screen width
           />
         ))}
       </div>

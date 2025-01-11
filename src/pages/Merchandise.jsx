@@ -27,24 +27,35 @@ const MerchandisePage = () => {
       {/* Content overlay */}
       <div className="relative z-10 brightness-[85%] flex flex-col min-h-screen">
         <header className="flex justify-center py-5">
-          <img src={logo} alt="Logo" className="h-16" />
+          <img src={logo} alt="Logo" className="h-12 md:h-16" />
         </header>
 
         <main className="flex-grow">
-          <section className="mb-10">
+          <section className="mb-10 px-5 md:px-10">
             <Carousel items={products.map((product) => product.image)} />
           </section>
 
           <div className="text-center px-5">
             <h1
-              className="text-7xl font-bold mb-12 text-black"
-              style={{ fontFamily: "'MedievalSharp', serif" }}
+              className="text-5xl md:text-7xl font-bold mb-8 text-black"
+              style={{
+                fontFamily: "'MedievalSharp', serif",
+                color: "transparent",
+                WebkitTextStroke: "2px gold", // Golden border
+              }}
             >
               Merchandise
             </h1>
-            <div className="text-3xl text-black font-bold mb-8">
+            <div
+              className="text-2xl md:text-4xl text-black mb-6"
+              style={{
+                fontFamily: "'MedievalSharp', serif",
+                color: "transparent",
+                WebkitTextStroke: "2px gold", // Golden border
+              }}
+            >
               {products.map((product) => (
-                <p key={product.id} className="mb-4">
+                <p key={product.id} className="mb-2 md:mb-4">
                   INR {product.price} / {product.name}
                 </p>
               ))}
@@ -54,7 +65,12 @@ const MerchandisePage = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="bg-gold text-black py-3 px-6 rounded text-lg">
+              <button
+                className="bg-gold text-black font-bold py-2 px-4 md:py-3 md:px-6 rounded text-lg"
+                style={{
+                  fontFamily: "'MedievalSharp', serif",
+                }}
+              >
                 Buy Now
               </button>
             </a>
