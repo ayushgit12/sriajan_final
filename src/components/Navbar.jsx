@@ -51,10 +51,10 @@ const Navbar = () => {
       route: "/legion",
     },
     {
-      name: "Patrons",
+      name: "Merchandise",
       icon: <Flame className="w-5 h-5" />,
       description: "Pillars of the festival",
-      route: "/patrons",
+      route: "/merchandise",
     },
     {
       name: "Registrum",
