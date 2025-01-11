@@ -13,3 +13,10 @@
 .animate-walk {
   animation: walk 30s linear infinite;
 }
+.text-gold {
+  color: #d4af37;
+}
+
+.bg-gold {
+  background-color: #d4af37;
+}
