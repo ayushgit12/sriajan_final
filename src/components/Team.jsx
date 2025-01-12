@@ -889,7 +889,7 @@ function Team() {
       className="min-h-screen pt-28 p-8 flex flex-col items-center"
       style={{
         backgroundImage:
-          'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://i.pinimg.com/474x/c7/d9/c1/c7d9c1693c6a907c850e64b719594df1.jpg")',
+          'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://i.pinimg.com/736x/45/c9/d3/45c9d356d30a0dfead45c47463fa3612.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
