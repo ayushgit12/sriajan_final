@@ -3,12 +3,36 @@ import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { motion } from "framer-motion";
+import img1 from "/img1.jpeg";
+import img2 from "/img2.jpeg";
+import img3 from "/img3.jpeg";
+import img4 from "/img4.jpeg";
+import img5 from "/img5.jpeg";
+import img6 from "/img6.jpeg";
+import img7 from "/img7.jpeg";
+import img8 from "/img8.jpeg";
+import img9 from "/img9.jpeg";
+import img10 from "/img10.jpeg";
+import img11 from "/img11.jpeg";
+import img12 from "/img12.jpg";
+import img13 from "/img13.jpeg";
 
 export default function ImagesList() {
   return (
-    
-    <Box sx={{ width: "75%", overflowY: "scroll", margin: "auto" }}>
-      <ImageList variant="masonry" cols={3} gap={8}>
+    <Box
+      sx={{
+        width: {
+          xs: "100%", // 100% width on small screens (e.g., mobile)
+          sm: "75%", // 75% width on larger screens (e.g., tablets and desktops)
+        },
+        overflowY: "scroll",
+        margin: "auto",
+        padding: "5rem 0",
+      }}
+    >
+      <ImageList variant="masonry" cols={3} gap={8}
+      
+      >
         {itemData.map((item, index) => (
           <motion.div
             key={item.img}
@@ -17,22 +41,45 @@ export default function ImagesList() {
             viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% of the item is visible
             transition={{ duration: 0.5, delay: index * 0.1 }} // Add staggered delay for smoother effect
           >
-            <ImageListItem sx={{ overflow: "hidden", position: "relative" }}>
-              {/* Add motion.img for hover scaling */}
-              <motion.img
-                whileHover={{ scale: 1.2 }} // Scale content on hover
-                transition={{ duration: 0.3 }} // Smooth scaling transition
-                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                src={`${item.img}?w=248&fit=crop&auto=format`}
-                alt={item.title}
-                loading="lazy"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover", // Maintain aspect ratio and crop content
-                  display: "block", // Ensure no inline block spacing
+            <ImageListItem
+              sx={{
+                overflow: "hidden",
+                position: "relative",
+              }}
+            >
+              {/* Add motion.div for animated glowing border */}
+              <motion.div
+                animate={{
+                  boxShadow: [
+                    "0 0 10px 4px rgba(255, 255, 255, 0.2)",
+                    "0 0 20px 8px rgba(255, 255, 255, 0.5)",
+                    "0 0 10px 4px rgba(255, 255, 255, 0.2)",
+                  ],
                 }}
-              />
+                whileHover={{ scale: 1.1 }} // Zoom in the entire container on hover
+                transition={{
+                  duration: 0.3, // Smooth transition
+                }}
+                style={{
+                  borderRadius: "12px", // Rounded corners
+                  overflow: "hidden", // Clip overflowing content
+                }}
+              >
+                <motion.img
+                  whileHover={{ scale: 1.2 }} // Zoom in the image itself on hover
+                  transition={{ duration: 0.3 }} // Smooth scaling transition
+                  src={item.img} // Use the direct image path
+                  srcSet={`${item.img} 2x`} // Optional srcSet for high resolution
+                  loading="lazy"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover", // Maintain aspect ratio and crop content
+                    display: "block", // Ensure no inline block spacing
+                    
+                  }}
+                />
+              </motion.div>
             </ImageListItem>
           </motion.div>
         ))}
@@ -42,52 +89,17 @@ export default function ImagesList() {
 }
 
 const itemData = [
-  {
-    img: "https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967632/fotofreaks_iitism_1675510867_3030727283215629849_5457821429_rdiys1.jpg",
-    title: "Bed",
-  },
-  {
-    img: "https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967638/fotofreaks_iitism_1675510867_3030727283232442698_5457821429_ntn445.jpg",
-    title: "Books",
-  },
-  {
-    img: "https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967623/fotofreaks_iitism_1675510867_3030727283148499964_5457821429_e2sk8e.jpg",
-    title: "Sink",
-  },
-  {
-    img: "https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967625/fotofreaks_iitism_1675510867_3030727283140034780_5457821429_gxrzzk.jpg",
-    title: "Kitchen",
-  },
-  {
-    img: "https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967635/fotofreaks_iitism_1675751380_3032744844446654362_5457821429_wdblrk.jpg",
-    title: "Blinds",
-  },
-  {
-    img: "https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967477/fotofreaks_iitism_1675751379_3032744844127884839_5457821429_clavzn.jpg",
-    title: "Chairs",
-  },
-  {
-    img: "https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967563/fotofreaks_iitism_1675751379_3032744844136108526_5457821429_ejmxch.jpg",
-    title: "Laptop",
-  },
-  {
-    img: "https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967625/fotofreaks_iitism_1675510867_3030727283140053768_5457821429_f8ul1t.jpg",
-    title: "Doors",
-  },
-  {
-    img: "https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967634/fotofreaks_iitism_1675510867_3030727283232278412_5457821429_bncuph.jpg",
-    title: "Coffee",
-  },
-  {
-    img: "https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967631/fotofreaks_iitism_1675597389_3031453081258077365_5457821429_fclfrl.jpg",
-    title: "Storage",
-  },
-  {
-    img: "https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967522/fotofreaks_iitism_1675676767_3032118946815236599_5457821429_g7qhtw.jpg",
-    title: "Candle",
-  },
-  {
-    img: "https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967533/fotofreaks_iitism_1675597389_3031453081182662787_5457821429_zbs9ev.jpg",
-    title: "Coffee table",
-  },
+  { img: img1, title: "Bed" },
+  { img: img2, title: "Books" },
+  { img: img3, title: "Sink" },
+  { img: img4, title: "Kitchen" },
+  { img: img5, title: "Blinds" },
+  { img: img6, title: "Chairs" },
+  { img: img7, title: "Laptop" },
+  { img: img8, title: "Doors" },
+  { img: img9, title: "Coffee" },
+  { img: img10, title: "Storage" },
+  { img: img11, title: "Candle" },
+  { img: img12, title: "Coffee table" },
+  { img: img13, title: "Plant" },
 ];
