@@ -79,11 +79,11 @@
 
 .role-badge {
     transform: translateY(20px) translateZ(0);
-    opacity: 0;
+    opacity: 1;
     transition: all 0.3s ease-out;
 }
 
-.team-card:hover .role-badge {
+.team-card:hover  {
     transform: translateY(0) translateZ(20px);
     opacity: 1;
 }
@@ -122,6 +122,10 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(2px);
+}
+
+.lead{
+    font-family: 'RomanFont';
 }
 
 /* more */
