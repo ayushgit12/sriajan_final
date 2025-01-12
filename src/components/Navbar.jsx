@@ -78,7 +78,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full transition-all duration-500 z-50 ${
+      className={`fixed w-full transition-all duration-500 z-50  ${
         !isVisible ? "-translate-y-full" : "translate-y-0"
       } ${
         scrolled
@@ -97,11 +97,10 @@ const Navbar = () => {
               onMouseLeave={() => setHoverEffect("")}
             >
               <img
+                onClick={() => (window.location.href = "/")}
                 src={logo} // Adjust the path if the file is not in the public folder
                 alt="Srijan Logo"
                 className={`h-36 w-40  object-contain transition-all duration-500 ${
-                  scrolled ? "rotate-12" : ""
-                } group-hover:scale-110 ${
                   hoverEffect
                     ? `shadow-[0_0_10px_theme(colors.${hoverEffect}.400)]`
                     : "shadow-amber-300"

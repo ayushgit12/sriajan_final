@@ -1,5 +1,15 @@
 import React from "react";
-import { ScrollText, Mail, MapPin, Sword, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
+import {
+  Home,
+  Users,
+  ShoppingBag,
+  Calendar,
+  Info,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
 import logo from "../../public/logo.png";
 
 const Footer = () => {
@@ -7,20 +17,40 @@ const Footer = () => {
 
   const footerSections = [
     {
-      title: "EXPLORE",
+      title: "NAVIGATION",
       links: [
-        { name: "Gladiator Arena", icon: <Sword className="w-4 h-4" /> },
-        { name: "Legion Training", icon: <Shield className="w-4 h-4" /> },
-        { name: "Ancient Scrolls", icon: <ScrollText className="w-4 h-4" /> },
+        { name: "Home", icon: <Home className="w-4 h-4" />, to: "/" },
+        { name: "Legion", icon: <Users className="w-4 h-4" />, to: "/legion" },
+        {
+          name: "Merchandise",
+          icon: <ShoppingBag className="w-4 h-4" />,
+          to: "/merchandise",
+        },
+        {
+          name: "Events",
+          icon: <Calendar className="w-4 h-4" />,
+          to: "/events",
+        },
+        { name: "About", icon: <Info className="w-4 h-4" />, to: "/about" },
       ],
     },
     {
       title: "CONTACT",
       links: [
-        { name: "srijan@iitism.ac.in", icon: <Mail className="w-4 h-4" /> },
+        {
+          name: "srijan@iitism.ac.in",
+          icon: <Mail className="w-4 h-4" />,
+          to: "mailto:srijan@iitism.ac.in",
+        },
+        {
+          name: "1234567890",
+          icon: <Phone className="w-4 h-4" />,
+        },
         {
           name: "Indian Institute of Technology (ISM) Dhanbad",
           icon: <MapPin className="w-4 h-4" />,
+          to: "https://www.iitism.ac.in/",
+          external: true,
         },
       ],
     },
@@ -44,11 +74,13 @@ const Footer = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {/* Logo Section */}
             <div className="flex justify-center sm:justify-start mb-6 sm:mb-0">
-              <img
-                src={logo}
-                alt="Srijan Logo"
-                className="h-[120px] w-[120px] sm:h-[150px] sm:w-[150px] md:h-[200px] md:w-[200px] object-contain transition-transform duration-300 group-hover:rotate-12"
-              />
+              <Link to="/">
+                <img
+                  src={logo}
+                  alt="Srijan Logo"
+                  className="h-[120px] w-[120px] sm:h-[150px] sm:w-[150px] md:h-[200px] md:w-[200px] object-contain transition-transform duration-300 hover:rotate-12"
+                />
+              </Link>
             </div>
 
             {/* Footer Sections */}
@@ -63,17 +95,33 @@ const Footer = () => {
                       key={link.name}
                       className="flex justify-center sm:justify-start"
                     >
-                      <a
-                        href="#"
-                        className="group flex items-center space-x-2 text-amber-300/80 hover:text-amber-400 transition-colors duration-300"
-                      >
-                        <span className="transform group-hover:rotate-12 transition-transform duration-300">
-                          {link.icon}
-                        </span>
-                        <span className="group-hover:translate-x-1 transition-transform duration-300 text-sm md:text-base">
-                          {link.name}
-                        </span>
-                      </a>
+                      {link.external ? (
+                        <a
+                          href={link.to}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex items-center space-x-2 text-amber-300/80 hover:text-amber-400 transition-colors duration-300"
+                        >
+                          <span className="transform group-hover:rotate-12 transition-transform duration-300">
+                            {link.icon}
+                          </span>
+                          <span className="group-hover:translate-x-1 transition-transform duration-300 text-sm md:text-base">
+                            {link.name}
+                          </span>
+                        </a>
+                      ) : (
+                        <Link
+                          to={link.to}
+                          className="group flex items-center space-x-2 text-amber-300/80 hover:text-amber-400 transition-colors duration-300"
+                        >
+                          <span className="transform group-hover:rotate-12 transition-transform duration-300">
+                            {link.icon}
+                          </span>
+                          <span className="group-hover:translate-x-1 transition-transform duration-300 text-sm md:text-base">
+                            {link.name}
+                          </span>
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -87,24 +135,24 @@ const Footer = () => {
                 © {currentYear} SRIJAN FESTIVAL
               </p>
               <div className="flex justify-center space-x-4 sm:space-x-6 text-amber-300/60 text-xs sm:text-sm">
-                <a
-                  href="#"
+                <Link
+                  to="/terms"
                   className="hover:text-amber-400 transition-colors duration-300"
                 >
                   Terms
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/privacy"
                   className="hover:text-amber-400 transition-colors duration-300"
                 >
                   Privacy
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/cookies"
                   className="hover:text-amber-400 transition-colors duration-300"
                 >
                   Cookies
-                </a>
+                </Link>
               </div>
             </div>
           </div>

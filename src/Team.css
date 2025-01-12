@@ -1,0 +1,175 @@
+/* Card animations and effects */
+.team-card {
+    perspective: 1500px;
+}
+
+.card-inner {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.team-card:hover .card-inner {
+    transform: translateY(-8px) rotateX(5deg);
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-card:hover .image-container {
+    transform: translateZ(30px);
+}
+
+.image-container img {
+    transform: translateZ(0);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.team-card:hover .image-container img {
+    transform: scale(1.1) translateZ(20px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.border-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.border-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    animation: borderRotate 4s linear infinite;
+}
+
+@keyframes borderRotate {
+    0% {
+        clip-path: inset(0 0 95% 0);
+        border-color: #FFD700;
+    }
+
+    25% {
+        clip-path: inset(0 95% 0 0);
+        border-color: #B8860B;
+    }
+
+    50% {
+        clip-path: inset(95% 0 0 0);
+        border-color: #DAA520;
+    }
+
+    75% {
+        clip-path: inset(0 0 0 95%);
+        border-color: #CD853F;
+    }
+
+    100% {
+        clip-path: inset(0 0 95% 0);
+        border-color: #FFD700;
+    }
+}
+
+.role-badge {
+    transform: translateY(20px) translateZ(0);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.team-card:hover .role-badge {
+    transform: translateY(0) translateZ(20px);
+    opacity: 1;
+}
+
+.ornament {
+    opacity: 0;
+    transition: all 0.4s ease-out;
+}
+
+.team-card:hover .ornament {
+    opacity: 1;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    filter: brightness(0.7);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+}
+
+/* more */
+
+
+/* 
+.team-card {
+  width: 100%;
+  max-width: 320px;
+}
+
+.card-bg {
+  width: 100%;
+  height: 200px;
+  transition: transform 0.5s ease;
+}
+
+.card-inner:hover .card-bg {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  transition: background-color 0.5s ease;
+}
+
+.card-inner:hover .card-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.border-effect {
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.card-inner:hover .border-effect {
+  border-color: #fbbf24;
+}
+
+.ornament {
+  width: 15px;
+  height: 15px;
+}
+
+.image-container img {
+  transition: transform 0.3s ease;
+}
+
+.card-inner:hover .image-container img {
+  transform: scale(1.1);
+}
+ */
