@@ -1,6 +1,7 @@
 import { Building2 } from "lucide-react";
 import img from "/bg4.avif";
 import { motion } from "framer-motion";
+import bg44 from "/bg23.jpg";
 
 const sponsorContainerVariants = {
   hidden: { opacity: 0 },
@@ -61,7 +62,7 @@ export default function Sponsorships() {
     <div
       className="min-h-screen pt-16 bg-[#f5e6d3]"
       style={{
-        backgroundImage: `url(${img})`,
+        backgroundImage: `url(${bg44})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

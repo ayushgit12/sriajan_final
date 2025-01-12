@@ -17,6 +17,7 @@ import img11 from "/img11.jpeg";
 import img12 from "/img12.jpg";
 import img13 from "/img13.jpeg";
 
+
 export default function ImagesList() {
   return (
     <Box
@@ -30,9 +31,7 @@ export default function ImagesList() {
         padding: "5rem 0",
       }}
     >
-      <ImageList variant="masonry" cols={3} gap={8}
-      
-      >
+      <ImageList variant="masonry" cols={3} gap={8}>
         {itemData.map((item, index) => (
           <motion.div
             key={item.img}
@@ -76,7 +75,6 @@ export default function ImagesList() {
                     height: "100%",
                     objectFit: "cover", // Maintain aspect ratio and crop content
                     display: "block", // Ensure no inline block spacing
-                    
                   }}
                 />
               </motion.div>

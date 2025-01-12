@@ -7,7 +7,8 @@ import {
   Flame,
   Users,
   Crown,
-  HandCoinsIcon
+  HandCoinsIcon,
+  BookOpenText,
 } from "lucide-react";
 import logo from "/logo.png"; // Adjust the path if the file is not in the public folder
 
@@ -37,7 +38,7 @@ const Navbar = () => {
       description: "Return to glory",
       route: "/",
     },
-    
+
     {
       name: "Events",
       icon: <Sword className="w-5 h-5" />,
@@ -59,10 +60,15 @@ const Navbar = () => {
     {
       name: "Merchandise",
       icon: <Flame className="w-5 h-5" />,
-      description: "Get the iconic gear of the festiva",
+      description: "Pillars of the festival",
       route: "/merchandise",
     },
-    
+    {
+      name: "About",
+      icon: <BookOpenText className="w-5 h-5" />,
+      description: "De Novis",
+      route: "/about",
+    },
   ];
 
   const generateRandomGlowColor = () => {
@@ -72,7 +78,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full transition-all duration-500 z-50 ${
+      className={`fixed w-full transition-all duration-500 z-50  ${
         !isVisible ? "-translate-y-full" : "translate-y-0"
       } ${
         scrolled
@@ -91,7 +97,7 @@ const Navbar = () => {
               onMouseLeave={() => setHoverEffect("")}
             >
               <img
-              onClick={()=>window.location.href="/"}
+                onClick={() => (window.location.href = "/")}
                 src={logo} // Adjust the path if the file is not in the public folder
                 alt="Srijan Logo"
                 className={`h-36 w-40  object-contain transition-all duration-500 ${

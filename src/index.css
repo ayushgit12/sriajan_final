@@ -61,3 +61,15 @@
   border-image-slice: 1;
   animation: rotate-border 8s linear infinite;
 }
+
+
+@font-face {
+  font-family: 'RomanFont';
+  src: url('./assets/font/AugustusBeveled-04jz.ttf') format('truetype');
+  src: url('./assets/font/Augustusbeveled-YOvj.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'RomanSmall';
+  src: url('./assets/font/KnightsQuest.ttf') format('truetype');
+}
