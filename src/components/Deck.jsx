@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
-import { Card } from "./Card";
+import Card from "./Card";
 
-const cardValues = ["music", "dance", "cinematography", "comedy", "fine arts", "culinary","music", "dance", "cinematography", "comedy", "fine arts", "culinary","music", "dance", "cinematography", "comedy"];
+const cardValues = ["music", "dance", "cinema", "comedy", "finearts", "culinary","fashion", "drama", "literary", "quiz"];
 
 export default function Deck() {
   const [cards, setCards] = useState([]);
@@ -43,8 +43,8 @@ export default function Deck() {
   }, [calculateColumns]);
 
   const getGridPosition = useCallback((index) => {
-    const CARD_WIDTH = Math.min(350, (dimensions.width * 0.8) / dimensions.columns);
-    const CARD_HEIGHT = (CARD_WIDTH * 0.85); // Maintain aspect ratio
+    const CARD_WIDTH = Math.min(450, (dimensions.width * 0.8) / dimensions.columns);
+    const CARD_HEIGHT = (CARD_WIDTH * 1.1); // Maintain aspect ratio
     const HORIZONTAL_GAP = CARD_WIDTH * 0.2;
     const VERTICAL_GAP = CARD_HEIGHT * 0.2;
 
@@ -70,16 +70,18 @@ export default function Deck() {
     return () => clearTimeout(timer);
   }, []);
 
-  const height = (cardValues.length/dimensions.columns + 1)*300*1.05;
+  const height = (cardValues.length/dimensions.columns + 1)*420*1.05;
   console.log(height);
 
   return (
-    <div 
-  style={{ 
-    height: `${dimensions.width < 640 ? height + 320 : height}px` 
-  }} 
-  className="bg-orange-300 flex items-center justify-center overflow-hidden"
->
+    <div
+  style={{
+    height: `${dimensions.width < 640 ? height + 320 : height}px`,
+    backgroundImage: 'url(./src/assets/bg2.png)',
+    backgroundSize: '100% auto',
+    backgroundRepeat: 'repeat-y',
+    backgroundPosition: 'center top',
+  }} className="bg-orange-300 flex items-center justify-center overflow-hidden select-none">
       <div className="w-full">
         {cards.map((value, index) => {
           const { x, y, width, height } = getGridPosition(index);
@@ -116,7 +118,7 @@ export default function Deck() {
                 damping: 15
               }}
             >
-              <Card value={value} />
+              <Card value={value} index={index}/>
             </motion.div>
           );
         })}

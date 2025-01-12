@@ -3,36 +3,31 @@ import Navbar from "./components/Navbar";
 import Landingpage from "./components/Landing";
 import Footer from "./components/Footer";
 // import Signup from "./components/signup";
-// import curtains from "/curtains.gif"; // Assuming this is in your public folder
+// import curtains from "/curtains.gif";  // Assuming this is in your public folder
 // import { useState, useEffect } from "react";
-
+import Deck from "./components/Deck";
 import Merchandise from "./pages/Merchandise";
 import Team from "./components/Team";
 import AboutPage from "./components/About";
 
+import Sponsorships from "./pages/Sponsorships";
 function App() {
-  // const [hasSeenCurtains, setHasSeenCurtains] = useState(false);
-
-  // useEffect(() => {
-  //   // Check if the curtains GIF has already been played
-  //   const curtainsPlayed = localStorage.getItem("curtainsPlayed");
-  //   if (!curtainsPlayed) {
-  //     setHasSeenCurtains(true);
-  //     localStorage.setItem("curtainsPlayed", "true"); // Mark as played
-  //   }
-  // }, []);
-
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Landingpage />} />
-        <Route path="/merchandise" element={<Merchandise />} />
-        <Route path="/legion" element={<Team />} />
-        <Route path="/about" element={<AboutPage />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Landingpage />} />
+          {/* <Route path="/signup" element={<Signup />} /> */}
+          <Route path="/merchandise" element={<Merchandise />} />
+          <Route path="/sponsorships" element={<Sponsorships />} />
+          <Route path="/legion" element={<Team />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/events" element={<Deck />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 

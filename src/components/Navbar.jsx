@@ -3,12 +3,11 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import {
   Menu,
   X,
-  Scroll,
   Sword,
-  Shield,
   Flame,
   Users,
   Crown,
+  HandCoinsIcon,
   BookOpenText,
 } from "lucide-react";
 import logo from "/logo.png"; // Adjust the path if the file is not in the public folder
@@ -39,6 +38,7 @@ const Navbar = () => {
       description: "Return to glory",
       route: "/",
     },
+
     {
       name: "Events",
       icon: <Sword className="w-5 h-5" />,
@@ -46,28 +46,28 @@ const Navbar = () => {
       route: "/events",
     },
     {
+      name: "Sponsorships",
+      icon: <HandCoinsIcon className="w-6 h-6" />,
+      description: "Empowered and amplified by the brands",
+      route: "/sponsorships", // Add the correct route for registration
+    },
+    {
       name: "Legion",
       icon: <Users className="w-5 h-5" />,
-      description: "Join the ranks",
+      description: "Community behind this",
       route: "/legion",
     },
     {
       name: "Merchandise",
       icon: <Flame className="w-5 h-5" />,
-      description: "view the merces ",
+      description: "Pillars of the festival",
       route: "/merchandise",
     },
-    // {
-    //   name: "Team",
-    //   icon: <Shield className="w-5 h-5" />,
-    //   description: "Enter the legion",
-    //   route: "/team", // Add the correct route for registration
-    // },
     {
       name: "About",
       icon: <BookOpenText className="w-5 h-5" />,
-      description: "De Nobis",
-      route: "/about", // Add the correct route for registration
+      description: "De Novis",
+      route: "/about",
     },
   ];
 
@@ -106,18 +106,6 @@ const Navbar = () => {
                     : "shadow-amber-300"
                 }`}
               />
-              {/* <div className="ml-3 font-serif">
-                <span
-                  className={`text-2xl font-bold transition-colors duration-300 ${
-                    hoverEffect ? `text-${hoverEffect}-400` : "text-amber-300"
-                  } group-hover:text-amber-400`}
-                >
-                  SRIJAN
-                </span>
-                <span className="block text-xs text-amber-400/80 group-hover:text-amber-300">
-                  GLORIA · VIRTUS · HONOR
-                </span>
-              </div> */}
             </div>
 
             <div className="hidden md:block">
