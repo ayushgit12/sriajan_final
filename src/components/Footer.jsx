@@ -38,7 +38,7 @@ const Footer = () => {
             <img
               src="https://media.tenor.com/PBC-LtbDN9IAAAAi/chariot-ride.gif"
               alt="Walking Camel"
-              className="h-[120px] object-contain filter brightness-120 sepia-[0.4] contrast-125"
+              className="h-[120px] object-contain filter brightness-120 sepia-[0.4] contrast-125 z-50"
             />
           </div>
         </div>

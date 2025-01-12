@@ -10,6 +10,7 @@ import curtains from "/curtains.gif";
 import img from "/bg4.avif";
 import day3 from "/day32.mp4";
 import InfiniteCarousel from "./InfiniteCarousel";
+import diff3 from "/bg23.jpg";
 
 const Landingpage = () => {
   const [imageSrc, setImageSrc] = useState(rome);
@@ -65,20 +66,12 @@ const Landingpage = () => {
   return (
     <div>
       {/* Curtains GIF */}
-      {/* {showCurtains && (
-        <div className="fixed top-0 left-0 w-screen h-screen z-[100] flex items-center justify-center">
-          <img
-            src={curtains}
-            alt="Curtains"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      )} */}
+     
 
       <div className="relative bg-black min-h-screen">
         <img
           src={down}
-          className="absolute bottom-5 cursor-pointer h-28 z-50 left-1/2 -translate-x-1/2"
+          className="absolute bottom-5 cursor-pointer h-28 z-20 left-1/2 -translate-x-1/2"
           alt=""
           onClick={scrollToNextSection} // Add onClick to trigger scrolling
         />
@@ -93,10 +86,16 @@ const Landingpage = () => {
                 ease: "easeInOut",
                 delay: 1, // Delay the animation by 2 seconds
               }}
-              className="brightness-[100%] rounded-full md:h-96 h-[250px] w-[600px] "
+              className="brightness-[100%] rounded-full md:h-96 h-[250px] w-[600px]"
               style={{ filter: "drop-shadow(0 0 10px orange)", zIndex: "1" }}
               src={logo}
               alt="Logo"
+              onWheel={() => {
+                window.scrollTo({
+                  top: window.innerHeight,
+                  behavior: "smooth", // Smooth scrolling effect
+                });
+              }}
             />
           </div>
 
@@ -107,10 +106,10 @@ const Landingpage = () => {
             className={`text-center mt-8 text-white font-semibold md:text-4xl transition-opacity duration-500 ${
               showText ? "opacity-100" : "opacity-0"
             }`}
-            style={{ fontFamily: "'MedievalSharp', serif",
-              color: "white"
-
-             }}
+            style={{
+              fontFamily: "'MedievalSharp', serif",
+              color: "white",
+            }}
           >
             January 31st to February 2nd, 2025
           </p>
@@ -143,7 +142,7 @@ const Landingpage = () => {
       <div
         className="min-h-screen"
         style={{
-          backgroundImage: `url(${img})`,
+          backgroundImage: `url(${diff3})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -159,7 +158,7 @@ const Landingpage = () => {
         >
           Welcome to the Roman Revelry
         </h1>
-        <p className="text-center md:text-2xl text-lg  font-serif md:pb-4">
+        <p className="text-center md:text-2xl text-lg font-serif md:pb-4">
           A celebration of the Roman Empire
         </p>
 
@@ -173,13 +172,16 @@ const Landingpage = () => {
           controls
           autoPlay={true}
           muted
-          className="h-full mx-auto pb-16 "
+          className="h-full mx-auto pb-16"
+          style={{
+            borderRadius: "25px",
+          }}
           src={day3}
         ></video>
         <InfiniteCarousel />
 
         <p className="text-center md:text-6xl text-amber-950 font-bold text-3xl py-16">
-          Coming Soon !
+          Coming Soon!
         </p>
       </div>
     </div>
