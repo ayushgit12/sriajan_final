@@ -2,14 +2,25 @@ import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import Card from "./Card";
 
-const cardValues = ["music", "dance", "cinema", "comedy", "finearts", "culinary","fashion", "drama", "literary", "quiz"];
+const cardValues = [
+  "music",
+  "dance",
+  "cinema",
+  "comedy",
+  "finearts",
+  "culinary",
+  "fashion",
+  "drama",
+  "literary",
+  "quiz",
+];
 
 export default function Deck() {
   const [cards, setCards] = useState([]);
   const [isDealt, setIsDealt] = useState(false);
   const [dimensions, setDimensions] = useState({
-    width: typeof window !== 'undefined' ? window.innerWidth : 0,
-    columns: 3
+    width: typeof window !== "undefined" ? window.innerWidth : 0,
+    columns: 3,
   });
 
   // Initialize cards
@@ -19,10 +30,10 @@ export default function Deck() {
 
   // Calculate columns based on screen width
   const calculateColumns = useCallback((width) => {
-    if (width < 640) return 1;      // sm
-    if (width < 1024) return 2;     // md
-    if (width < 1536) return 3;     // lg
-    return 4;                       // xl
+    if (width < 640) return 1; // sm
+    if (width < 1024) return 2; // md
+    if (width < 1536) return 3; // lg
+    return 4; // xl
   }, []);
 
   // Handle resize
@@ -31,37 +42,40 @@ export default function Deck() {
       const width = window.innerWidth;
       setDimensions({
         width,
-        columns: calculateColumns(width)
+        columns: calculateColumns(width),
       });
     };
 
     // Set initial dimensions
     handleResize();
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [calculateColumns]);
 
-  const getGridPosition = useCallback((index) => {
-    const CARD_WIDTH = Math.min(450, (dimensions.width * 0.8) / dimensions.columns);
-    const CARD_HEIGHT = (CARD_WIDTH * 1.1); // Maintain aspect ratio
-    const HORIZONTAL_GAP = CARD_WIDTH * 0.2;
-    const VERTICAL_GAP = CARD_HEIGHT * 0.2;
+  const getGridPosition = useCallback(
+    (index) => {
+      const CARD_WIDTH = 300;
+      const CARD_HEIGHT = 420;
+      const HORIZONTAL_GAP = CARD_WIDTH * 0.2;
+      const VERTICAL_GAP = CARD_HEIGHT * 0.2;
 
-    const col = index % dimensions.columns;
-    const row = Math.floor(index / dimensions.columns);
+      const col = index % dimensions.columns;
+      const row = Math.floor(index / dimensions.columns);
 
-    // Calculate total grid width
-    const totalWidth = (dimensions.columns * (CARD_WIDTH + HORIZONTAL_GAP)) - HORIZONTAL_GAP;
-    const leftOffset = (dimensions.width - totalWidth) / 2;
+      const totalWidth =
+        dimensions.columns * (CARD_WIDTH + HORIZONTAL_GAP) - HORIZONTAL_GAP;
+      const leftOffset = (dimensions.width - totalWidth) / 2;
 
-    return {
-      x: leftOffset + (col * (CARD_WIDTH + HORIZONTAL_GAP)),
-      y: 100 + (row * (CARD_HEIGHT + VERTICAL_GAP)),
-      width: CARD_WIDTH,
-      height: CARD_HEIGHT
-    };
-  }, [dimensions]);
+      return {
+        x: leftOffset + col * (CARD_WIDTH + HORIZONTAL_GAP),
+        y: row * (CARD_HEIGHT + VERTICAL_GAP),
+        width: CARD_WIDTH,
+        height: CARD_HEIGHT,
+      };
+    },
+    [dimensions]
+  );
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -70,55 +84,61 @@ export default function Deck() {
     return () => clearTimeout(timer);
   }, []);
 
-  const height = (cardValues.length/dimensions.columns + 1)*420*1.05;
-  console.log(height);
+  const totalRows = Math.ceil(cardValues.length / dimensions.columns);
+  const totalHeight = totalRows * (420 + 420 * 0.2) - 420 * 0.2 + 200; //check this
 
   return (
     <div
-  style={{
-    height: `${dimensions.width < 640 ? height + 320 : height}px`,
-    backgroundImage: 'url(./src/assets/bg2.png)',
-    backgroundSize: '100% auto',
-    backgroundRepeat: 'repeat-y',
-    backgroundPosition: 'center top',
-  }} className="bg-orange-300 flex items-center justify-center overflow-hidden select-none">
-      <div className="w-full">
+      style={{
+        height: `${totalHeight}px`,
+        backgroundImage: "url(./src/assets/bg2.png)",
+        backgroundSize: "100% auto",
+        backgroundRepeat: "repeat-y",
+        backgroundPosition: "center top",
+      }}
+      className="bg-orange-300 flex items-start justify-center overflow-hidden select-none pt-24"
+    >
+      <div className="w-full relative">
         {cards.map((value, index) => {
           const { x, y, width, height } = getGridPosition(index);
-          
+
           return (
             <motion.div
               key={index}
               style={{
                 width: width,
                 height: height,
-                position: 'absolute',
+                position: "absolute",
                 top: 0,
                 left: 0,
               }}
-              initial={{ 
+              initial={{
                 x: dimensions.width / 2 - width / 2,
                 y: 50,
                 scale: 1,
                 rotateY: 180,
                 zIndex: cards.length - index,
               }}
-              animate={isDealt ? {
-                x,
-                y,
-                scale: 1,
-                rotateY: 0,
-                zIndex: 1,
-              } : {}}
+              animate={
+                isDealt
+                  ? {
+                      x,
+                      y,
+                      scale: 1,
+                      rotateY: 0,
+                      zIndex: 1,
+                    }
+                  : {}
+              }
               transition={{
                 delay: index * 0.1,
                 duration: 0.8,
                 type: "spring",
                 stiffness: 50,
-                damping: 15
+                damping: 15,
               }}
             >
-              <Card value={value} index={index}/>
+              <Card value={value} index={index} />
             </motion.div>
           );
         })}
