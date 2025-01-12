@@ -737,7 +737,7 @@ function Team() {
     },
     {
       name: "Kumar Daksh",
-      department: "",
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619608/bcod6vm0p2enncntqbsh.webp",
       team: "Event Team",
