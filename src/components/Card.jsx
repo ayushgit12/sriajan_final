@@ -1,7 +1,17 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Card({ value, index }) {
   const letters = ["A", "K", "Q"];
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/events2");
+  };
   return (
-    <div className="relative w-[300px] h-[420px] rounded-2xl shadow-xl overflow-hidden drop-shadow-2xl">
+    <div
+      className="relative w-[300px] h-[420px] rounded-2xl shadow-xl overflow-hidden drop-shadow-2xl"
+      onClick={handleClick}
+      style={{ cursor: "pointer" }} // Optional: Indicates the element is clickable
+    >
       {/* Yellowish Fade Background */}
       <div
         className="absolute inset-0"
