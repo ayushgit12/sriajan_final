@@ -12,7 +12,7 @@ const AboutPage = () => {
       {/* Text Content Styled Like Ancient Script */}
       <div className="text-center max-w-4xl px-6 ">
         <h2
-          className=" mb-8"
+          className=" mb-8 pt-20"
           style={{
             fontSize: "100px",
             color: "#3b3024", // Dark brown for ancient feel
