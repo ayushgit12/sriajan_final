@@ -480,7 +480,10 @@ function TeamMemberCard({
   instagram,
 }) {
   return (
-    <div className="team-card" style={{ minWidth: "300px", minHeight: "400px" }}>
+    <div
+      className="team-card"
+      style={{ minWidth: "300px", minHeight: "400px" }}
+    >
       <div className="card-inner relative group">
         <div className="border-effect rounded-lg overflow-hidden">
           {/* Background Image */}
@@ -524,7 +527,9 @@ function TeamMemberCard({
                 </span>
               </div>
               {department && (
-                <p className="text-amber-200/80 text-sm mt-8 tracking-widest font-bold">{department}</p>
+                <p className="text-amber-200/80 text-sm mt-8 tracking-widest font-bold">
+                  {department}
+                </p>
               )}
               {/* Social Links */}
 
@@ -571,7 +576,7 @@ function Team() {
     {
       name: "Prof. Vinay Kumar Rajak",
       role: "Convenor",
-      department: "Dept. of Electrical Engineering",
+      department: "Dept. of Petroleum Engineering",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708702/tndurhwxcbbttytnmlnr.png",
       cardBackground:
@@ -582,7 +587,7 @@ function Team() {
     {
       name: "Prof. Rajashekhar Reddy",
       role: "Co-Convenor",
-      department: "Dept. of Electrical Engineering",
+      department: "Dept. of Fuel, Minerals and Metallurgical Engineering",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708703/vksvr4xl67k3svx4lkqq.jpg",
       cardBackground:
@@ -593,7 +598,7 @@ function Team() {
     {
       name: "Prof. Madhulika Gupta",
       role: "Co-Convenor",
-      department: "Dept. of Electrical Engineering",
+      department: "Dept. of Chemistry and Chemial Biology ",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708700/aajajntlajkqycwq8k8b.png",
       cardBackground:
@@ -604,7 +609,7 @@ function Team() {
     {
       name: `\u00A0\u00A0\u00A0\u00A0\u00A0Prof.\u00A0\u00A0Ashok\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Kumar`,
       role: "Treasurer",
-      department: "Dept. of Electrical Engineering",
+      department: "Dept. of Mining Engineering",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708697/ozwxkxowhknkdrwzn1sh.png",
       cardBackground:
@@ -612,7 +617,6 @@ function Team() {
       linkedin: "#",
       instagram: "#",
     },
-    
 
     // Add other leadership members with similar structure
   ];
@@ -654,7 +658,7 @@ function Team() {
     },
     {
       name: "Naramdas Shiva",
-      department: 'Head',
+      department: "Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619183/tz4d043u0cghog0azx4u.jpg",
       // cardBackground:
@@ -670,32 +674,32 @@ function Team() {
     },
     {
       name: "Manav Sharma",
-      department: 'Head',
+      department: "Head",
       image:
-      " https://res.cloudinary.com/dfczrbv7b/image/upload/v1736707401/e06ifrdrahn64lts5wy9.jpg",
+        " https://res.cloudinary.com/dfczrbv7b/image/upload/v1736707401/e06ifrdrahn64lts5wy9.jpg",
       team: "Technical Team",
     },
     {
       name: "Siddharth Aggrawal",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736707406/g4kufwfd4ubuwttbtu3d.jpg ",
-        team: "Technical Team",
-      },
-      {
-        name: "Divya Gupta",
-        department: 'Co-Head',
-        image:
-          "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620457/zdkp2uvyhosodedbjgxd.jpg",
-        team: "Technical Team",
-      },
-      {
-        name: "Shubham Saurav",
-        department: 'Head',
-        image:
-          "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620461/flc0zraard9sc9vvz6qs.jpg",
-        team: "Technical Team",
-      },
+      team: "Technical Team",
+    },
+    {
+      name: "Divya Gupta",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620457/zdkp2uvyhosodedbjgxd.jpg",
+      team: "Technical Team",
+    },
+    {
+      name: "Shubham Saurav",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620461/flc0zraard9sc9vvz6qs.jpg",
+      team: "Technical Team",
+    },
     {
       name: "Dheeraj",
       department: "Co-Head",
@@ -705,171 +709,171 @@ function Team() {
     },
     {
       name: "Shreya Shradha",
-      department: 'Head',
+      department: "Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619441/rhvswo06qrp2d7va5cry.jpg",
       team: "Content Team",
     },
     {
       name: "Sona Kumari",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619444/bdlaatw2wiqzf4wa7d1g.jpg",
       team: "Content Team",
     },
     {
       name: "Raghav Kansal",
-      department: 'Head',
+      department: "Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619516/lopyknf6i0ubgcycryno.jpg",
       team: "Design Team",
     },
     {
       name: "Shayamal Tirkey",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619522/mee2k3z4rd0f5ik2ffee.jpg",
       team: "Design Team",
     },
     {
       name: "Kumar Daksh",
-      department: '',
+      department: "",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619608/bcod6vm0p2enncntqbsh.webp",
       team: "Event Team",
     },
     {
       name: "Adib Nawaz",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619702/pe2rlczfu50po26rcpl4.webp",
       team: "Finance Team",
     },
     {
       name: "Karan Negi",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619704/j5z4wttssv00n2fkrgaq.webp",
       team: "Finance Team",
     },
     {
       name: "Sachin Parmar",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619709/audroso3kkmmp1d4uenq.jpg",
       team: "Finance Team",
     },
     {
       name: "Upkar Bharti",
-      department: 'Head',
+      department: "Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736711754/v8fjvb2osfzq3qaebn3f.jpg ",
       team: "Finance Team",
     },
     {
       name: "Gayatree Behera",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619791/yqiai0c4vop6cioqjo8s.jpg",
       team: "Hospitality Team",
     },
     {
       name: "Riyanshi Gupta",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619798/m6hzgtqjcbouucjonorr.jpg",
       team: "Hospitality Team",
     },
     {
       name: "Mohit Gupta",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619859/salcfakonnwce0chcwyu.jpg",
       team: "Marketing Team",
     },
     {
       name: "Pragati Jangir",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619863/a3ckh9qmezkinrkbrrux.jpg",
       team: "Marketing Team",
     },
     {
       name: "Sumit Manchanda",
-      department: 'Head',
+      department: "Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619865/sish4xzxuutbunoi2dh6.jpg",
       team: "Marketing Team",
     },
     {
       name: "Tuntun Ganjhu",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620096/yovudaa8tzpzx1p2iion.jpg",
       team: "Operations and Logistics Team",
     },
     {
       name: "Animesh",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620197/lgbgyv3jewcqjg5nucsc.jpg",
       team: "Promotion Team",
     },
     {
       name: "Abhinav Aditya",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620261/qvbabiu3ebppxwdsr77p.jpg",
       team: "Public Relation Team",
     },
     {
       name: "Manthanraj",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620267/oglg1frqjcixa7fzcgy3.jpg",
       team: "Public Relation Team",
     },
     {
       name: "Tejas",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736707414/d3daasso9wpcpxrlajsr.jpg ",
       team: "Security Team",
     },
     {
       name: "Vikash Kumar",
-      department: 'Head',
+      department: "Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620329/nsmkq2cdzg7joo9tbmz6.jpg",
       team: "Security Team",
     },
     {
       name: "Geetanjali",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736696751/dshtlvgxghcf32i0oimw.jpg",
       team: "Sponsorship Team",
     },
     {
       name: "Kartik Rahi",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620378/gnyupfr5ym0iybkzc7bh.jpg",
       team: "Sponsorship Team",
     },
     {
       name: "Manjeet",
-      department: 'Co-Head',
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620383/hrostggueo3few8yohsu.jpg",
       team: "Sponsorship Team",
     },
     {
       name: "Rishabh Raj",
-      department: 'Head',
+      department: "Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620384/g03d8jo7xm8h6jtajm6j.jpg",
-      team: "Sponsorship Team"
+      team: "Sponsorship Team",
     },
   ];
 
