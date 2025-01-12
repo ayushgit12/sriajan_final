@@ -52,7 +52,6 @@ const InfiniteCarousel = () => {
         width: "100%",
         overflow: "hidden",
         position: "relative",
-        margin: "0 22px",
       }}
       onMouseEnter={() => setIsHovered(true)} // Pause the carousel on hover
       onMouseLeave={() => setIsHovered(false)} // Resume the carousel when hover ends
