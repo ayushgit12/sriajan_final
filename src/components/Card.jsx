@@ -1,7 +1,7 @@
 export default function Card({value,index}) {
   const letters = ['A','K',"Q"];
   return (
-    <div className="relative w-[300px] h-[420px] rounded-2xl shadow-xl overflow-hidden">
+    <div className="relative w-[300px] h-[420px] rounded-2xl shadow-xl overflow-hidden drop-shadow-2xl">
       {/* Yellowish Fade Background */}
       <div 
         className="absolute inset-0"
