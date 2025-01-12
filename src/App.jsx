@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Signup from "./components/signup";
 import curtains from "/curtains.gif";  // Assuming this is in your public folder
 import { useState, useEffect } from "react";
+import Deck from "./components/Deck";
 
 import Merchandise from "./pages/Merchandise";
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Landingpage />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/merchandise" element={<Merchandise />} />
+          <Route path="/events" element={<Deck />}/>
         </Routes>
         {/* {hasSeenCurtains && (
           <div style={{ position: 'fixed', top: '0', left: '0', width: '100%', height: '100%', zIndex: '9999' }}>
