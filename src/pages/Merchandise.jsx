@@ -61,7 +61,7 @@ const MerchandisePage = () => {
               ))}
             </div>
             <a
-              href="https://forms.gle/your-google-form-link"
+              href="https://docs.google.com/forms/d/129LlqOTY5EeVKuDCJ-ZWpiJDukS3h40DfTxIUcqMPvk"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -77,9 +77,7 @@ const MerchandisePage = () => {
           </div>
         </main>
 
-        <footer className="py-5">
-          {/* Footer content (if any) */}
-        </footer>
+        <footer className="py-5">{/* Footer content (if any) */}</footer>
       </div>
     </div>
   );
