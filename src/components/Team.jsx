@@ -141,7 +141,7 @@ function Team() {
     {
       name: `\u00A0\u00A0\u00A0\u00A0\u00A0Prof.\u00A0\u00A0Ashok\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Kumar`,
       role: "Treasurer",
-      department: "Dept. of Mining Engineering",
+      department: "\u00A0\u00A0\u00A0\u00A0\u00A0Dept. of Mining Engineering",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708697/ozwxkxowhknkdrwzn1sh.png",
       cardBackground:
