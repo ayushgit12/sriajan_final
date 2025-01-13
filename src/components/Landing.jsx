@@ -6,8 +6,6 @@ import logo from "/logo.png";
 import Timer from "./Timer"; // Import the Timer component
 import ImagesList from "./imagesList";
 import down from "/down.gif";
-import curtains from "/curtains.gif";
-import img from "/bg4.avif";
 import day3 from "/day32.mp4";
 import InfiniteCarousel from "./InfiniteCarousel";
 import diff3 from "/bg23.jpg";
@@ -15,7 +13,6 @@ import diff3 from "/bg23.jpg";
 const Landingpage = () => {
   const [imageSrc, setImageSrc] = useState(rome);
   const [showText, setShowText] = useState(false);
-  const [showCurtains, setShowCurtains] = useState(true); // State to manage curtains visibility
 
   const scrollToNextSection = () => {
     window.scrollTo({
@@ -23,20 +20,6 @@ const Landingpage = () => {
       behavior: "smooth", // Smooth scrolling effect
     });
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setShowText(true);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     const updateImage = () => {
@@ -54,20 +37,9 @@ const Landingpage = () => {
     return () => window.removeEventListener("resize", updateImage);
   }, []);
 
-  useEffect(() => {
-    // Hide the curtains after 3 seconds
-    const timer = setTimeout(() => {
-      setShowCurtains(false);
-    }, 3000);
-
-    return () => clearTimeout(timer); // Clean up the timer
-  }, []);
-
   return (
     <div>
-      {/* Curtains GIF */}
-     
-
+      {/* First Section with Logo */}
       <div className="relative bg-black min-h-screen">
         <img
           src={down}
@@ -84,17 +56,17 @@ const Landingpage = () => {
               transition={{
                 duration: 3, // Smooth transition over 3 seconds
                 ease: "easeInOut",
-                delay: 1, // Delay the animation by 2 seconds
+                delay: 0.8, // Delay the animation by 2 seconds
               }}
               className="brightness-[100%] rounded-full md:h-96 h-[250px] w-[600px]"
               style={{ filter: "drop-shadow(0 0 10px orange)", zIndex: "1" }}
               src={logo}
               alt="Logo"
-              onWheel={() => {
-                window.scrollTo({
-                  top: window.innerHeight,
-                  behavior: "smooth", // Smooth scrolling effect
-                });
+              onWheel={(e) => {
+                if (e.deltaY > 0) {
+                  // Detect scroll down and trigger the scroll
+                  scrollToNextSection();
+                }
               }}
             />
           </div>
@@ -139,6 +111,8 @@ const Landingpage = () => {
           }
         `}</style>
       </div>
+
+      {/* Second Section */}
       <div
         className="min-h-screen"
         style={{
@@ -174,10 +148,11 @@ const Landingpage = () => {
           muted
           className="h-full mx-auto pb-16"
           style={{
-            borderRadius: "25px",
+            borderRadius: "4%", // Makes the video fully rounded
           }}
           src={day3}
         ></video>
+
         <InfiniteCarousel />
 
         <p className="text-center md:text-6xl text-amber-950 font-bold text-3xl py-16">
