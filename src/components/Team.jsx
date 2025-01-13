@@ -161,14 +161,14 @@ function Team() {
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736618569/t0nbi0vyqc7ykzcbvreb.jpg",
       // cardBackground:
       //   "https://i.pinimg.com/474x/f2/d8/7f/f2d87f4aea5eac67b67ab1b60aa117fb.jpg",
-      team: "Advisors",
+      team: "Advisor",
     },
     {
       name: "Lakshya Garg",
       department: "Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736618571/kvkffp9mi7ueco7gqzja.jpg",
-      team: "Advisors",
+      team: "Advisor",
     },
 
     {

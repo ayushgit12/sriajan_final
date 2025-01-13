@@ -27,7 +27,9 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/events" element={<Deck />} />
         </Routes>
+        <div className="z-10">
         <Footer />
+        </div>
       </Router>
     </div>
   );

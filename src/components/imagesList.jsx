@@ -15,7 +15,7 @@ import img9 from "/img9.jpeg";
 import img10 from "/img10.jpeg";
 import img11 from "/img11.jpeg";
 import img12 from "/img12.jpg";
-import img13 from "/img13.jpeg";
+import img19 from "/img19.jpeg";
 
 
 export default function ImagesList() {
@@ -97,7 +97,8 @@ const itemData = [
   { img: img8, title: "Doors" },
   { img: img9, title: "Coffee" },
   { img: img10, title: "Storage" },
-  { img: img11, title: "Candle" },
   { img: img12, title: "Coffee table" },
-  { img: img13, title: "Plant" },
+  { img: img11, title: "Candle" },
+  { img: img19, title: "Couch" },
+  
 ];
