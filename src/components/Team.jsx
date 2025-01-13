@@ -475,12 +475,15 @@ function TeamMemberCard({
   role,
   image,
   cardBackground = "https://i.pinimg.com/474x/03/c8/46/03c8466c1edbcb11c3e321bcf093be05.jpg",
-  department = "Dept. of Electrical Engineering",
+  department,
   linkedin,
   instagram,
 }) {
   return (
-    <div className="team-card" style={{ width: "300px", height: "400px" }}>
+    <div
+      className="team-card"
+      style={{ minWidth: "300px", minHeight: "400px" }}
+    >
       <div className="card-inner relative group">
         <div className="border-effect rounded-lg overflow-hidden">
           {/* Background Image */}
@@ -518,17 +521,19 @@ function TeamMemberCard({
               >
                 {name}
               </h3>
-              <div className="role-badge mb-2">
+              <div className="role-badge mb-4">
                 <span className="inline-block bg-amber-900/50 text-amber-200 px-4 py-2 rounded-full border border-amber-600/30">
                   {role}
                 </span>
               </div>
               {department && (
-                <p className="text-amber-200/80 text-sm mb-3">{department}</p>
+                <p className="text-amber-200/80 text-sm mt-8 tracking-widest font-bold">
+                  {department}
+                </p>
               )}
               {/* Social Links */}
 
-              {role === "Frontend Developer" && (
+              {/* {role === "Frontend Developer" && (
                 <div className="flex justify-center space-x-4 cursor-pointer">
                   <a
                     href={linkedin}
@@ -557,7 +562,7 @@ function TeamMemberCard({
                     <Instagram className="w-5 h-5" />
                   </a>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         </div>
@@ -569,44 +574,44 @@ function TeamMemberCard({
 function Team() {
   const leadership = [
     {
-      name: "Prof. Sanjoy Mandal",
+      name: "Prof. Vinay Kumar Rajak",
       role: "Convenor",
-      department: "Dept. of Electrical Engineering",
+      department: "Dept. of Petroleum Engineering",
       image:
-        "https://res.cloudinary.com/dfr1kvie3/image/upload/v1703957539/prof_convener_mojstc.jpg",
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708702/tndurhwxcbbttytnmlnr.png",
       cardBackground:
         "https://i.pinimg.com/474x/f2/d8/7f/f2d87f4aea5eac67b67ab1b60aa117fb.jpg",
       linkedin: "#",
       instagram: "#",
     },
     {
-      name: "Prof. Arijit Baral",
+      name: "Prof. Rajashekhar Reddy",
       role: "Co-Convenor",
-      department: "Dept. of Electrical Engineering",
+      department: "Dept. of Fuel, Minerals and Metallurgical Engineering",
       image:
-        "https://res.cloudinary.com/dkdratnao/image/upload/v1704404941/Co-convenor_xoepnr.png",
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708703/vksvr4xl67k3svx4lkqq.jpg",
       cardBackground:
         "https://i.pinimg.com/474x/03/c8/46/03c8466c1edbcb11c3e321bcf093be05.jpg",
       linkedin: "#",
       instagram: "#",
     },
     {
-      name: "Prof. Arijit Baral",
+      name: "Prof. Madhulika Gupta",
       role: "Co-Convenor",
-      department: "Dept. of Electrical Engineering",
+      department: "Dept. of Chemistry and Chemial Biology ",
       image:
-        "https://res.cloudinary.com/dkdratnao/image/upload/v1704404941/Co-convenor_xoepnr.png",
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708700/aajajntlajkqycwq8k8b.png",
       cardBackground:
         "https://i.pinimg.com/474x/03/c8/46/03c8466c1edbcb11c3e321bcf093be05.jpg",
       linkedin: "#",
       instagram: "#",
     },
     {
-      name: "Prof. Arijit Baral",
-      role: "Co-Convenor",
-      department: "Dept. of Electrical Engineering",
+      name: `\u00A0\u00A0\u00A0\u00A0\u00A0Prof.\u00A0\u00A0Ashok\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Kumar`,
+      role: "Treasurer",
+      department: "Dept. of Mining Engineering",
       image:
-        "https://res.cloudinary.com/dkdratnao/image/upload/v1704404941/Co-convenor_xoepnr.png",
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708697/ozwxkxowhknkdrwzn1sh.png",
       cardBackground:
         "https://i.pinimg.com/474x/03/c8/46/03c8466c1edbcb11c3e321bcf093be05.jpg",
       linkedin: "#",
@@ -618,8 +623,17 @@ function Team() {
 
   const teamMembers = [
     {
+      name: "Aditya",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736711751/lm0zq26felvb9c8qnuab.jpg",
+      // cardBackground:
+      //   "https://i.pinimg.com/474x/f2/d8/7f/f2d87f4aea5eac67b67ab1b60aa117fb.jpg",
+      team: "Coordinater",
+    },
+    {
       name: "Priyanka",
-      // department: "Dept. of Electrical Engineering",
+      department: "Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736691655/hbel5vli2t3wdjw5ysxn.png",
       // cardBackground:
@@ -628,7 +642,7 @@ function Team() {
     },
     {
       name: "Avinash Sahu",
-      department: "Dept. of Electrical Engineering",
+      department: "Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736618569/t0nbi0vyqc7ykzcbvreb.jpg",
       // cardBackground:
@@ -637,12 +651,14 @@ function Team() {
     },
     {
       name: "Lakshya Garg",
+      department: "Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736618571/kvkffp9mi7ueco7gqzja.jpg",
       team: "Advisors",
     },
     {
       name: "Naramdas Shiva",
+      department: "Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619183/tz4d043u0cghog0azx4u.jpg",
       // cardBackground:
@@ -651,177 +667,213 @@ function Team() {
     },
     {
       name: "Tanush Nimbawat",
+      department: "Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736691167/w491e0syicpmk9x4pubi.jpg",
       team: "Coordinators",
     },
     {
-      name: "Dheeraj",
+      name: "Manav Sharma",
+      department: "Head",
       image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619432/yuv7ukrg36mskyrlogyd.jpg",
-      team: "Content Team",
+        " https://res.cloudinary.com/dfczrbv7b/image/upload/v1736707401/e06ifrdrahn64lts5wy9.jpg",
+      team: "Technical Team",
     },
     {
-      name: "Shreya Shradha",
+      name: "Siddharth Aggrawal",
+      department: "Co-Head",
       image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619441/rhvswo06qrp2d7va5cry.jpg",
-      team: "Content Team",
-    },
-    {
-      name: "Sona Kumari",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619444/bdlaatw2wiqzf4wa7d1g.jpg",
-      team: "Content Team",
-    },
-    {
-      name: "Raghav Kansal",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619516/lopyknf6i0ubgcycryno.jpg",
-      team: "Design Team",
-    },
-    {
-      name: "Shyamal Tirkey",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619522/mee2k3z4rd0f5ik2ffee.jpg",
-      team: "Design Team",
-    },
-    {
-      name: "Kumar Daksh",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619608/bcod6vm0p2enncntqbsh.webp",
-      team: "Event Team",
-    },
-    {
-      name: "Adib Nawaz",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619702/pe2rlczfu50po26rcpl4.webp",
-      team: "Finance Team",
-    },
-    {
-      name: "Karan Negi",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619704/j5z4wttssv00n2fkrgaq.webp",
-      team: "Finance Team",
-    },
-    {
-      name: "Sachin Parmar",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619709/audroso3kkmmp1d4uenq.jpg",
-      team: "Finance Team",
-    },
-    {
-      name: "Upkar Bharti",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619711/nui1aajk0nnjovn4jpmv.jpg",
-      team: "Finance Team",
-    },
-    {
-      name: "Gayatree Behera",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619791/yqiai0c4vop6cioqjo8s.jpg",
-      team: "Hospitality Team",
-    },
-    {
-      name: "Riyanshi Gupta",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619798/m6hzgtqjcbouucjonorr.jpg",
-      team: "Hospitality Team",
-    },
-    {
-      name: "Mohit Gupta",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619859/salcfakonnwce0chcwyu.jpg",
-      team: "Marketing Team",
-    },
-    {
-      name: "Pragati Jangir",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619863/a3ckh9qmezkinrkbrrux.jpg",
-      team: "Marketing Team",
-    },
-    {
-      name: "Sumit Manchanda",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619865/sish4xzxuutbunoi2dh6.jpg",
-      team: "Marketing Team",
-    },
-    {
-      name: "Tuntun Ganjhu",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620096/yovudaa8tzpzx1p2iion.jpg",
-      team: "Operations and Logistics Team",
-    },
-    {
-      name: "Animesh",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620197/lgbgyv3jewcqjg5nucsc.jpg",
-      team: "Promotion Team",
-    },
-    {
-      name: "Jatin Kumar",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620199/ksktobpt3w9tfjdyxdcz.jpg",
-      team: "Promotion Team",
-    },
-    {
-      name: "Abhinav Aditya",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620261/qvbabiu3ebppxwdsr77p.jpg",
-      team: "Public Relation Team",
-    },
-    {
-      name: "Manthanraj",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620267/oglg1frqjcixa7fzcgy3.jpg",
-      team: "Public Relation Team",
-    },
-    {
-      name: "Tejas",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620328/vdukg9vjwmsh96xugu1m.heic",
-      team: "Security Team",
-    },
-    {
-      name: "Vikash",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620329/nsmkq2cdzg7joo9tbmz6.jpg",
-      team: "Security Team",
-    },
-    {
-      name: "Geetanjali",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736696751/dshtlvgxghcf32i0oimw.jpg",
-      team: "Sponsorship Team",
-    },
-    {
-      name: "Kartik Rahi",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620378/gnyupfr5ym0iybkzc7bh.jpg",
-      team: "Sponsorship Team",
-    },
-    {
-      name: "Manjeet",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620383/hrostggueo3few8yohsu.jpg",
-      team: "Sponsorship Team",
-    },
-    {
-      name: "Rishabh Raj",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620384/g03d8jo7xm8h6jtajm6j.jpg",
-      team: "Sponsorship Team",
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736707406/g4kufwfd4ubuwttbtu3d.jpg ",
+      team: "Technical Team",
     },
     {
       name: "Divya Gupta",
+      department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620457/zdkp2uvyhosodedbjgxd.jpg",
       team: "Technical Team",
     },
     {
       name: "Shubham Saurav",
+      department: "Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620461/flc0zraard9sc9vvz6qs.jpg",
       team: "Technical Team",
+    },
+    {
+      name: "Dheeraj",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619432/yuv7ukrg36mskyrlogyd.jpg",
+      team: "Content Team",
+    },
+    {
+      name: "Shreya Shradha",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619441/rhvswo06qrp2d7va5cry.jpg",
+      team: "Content Team",
+    },
+    {
+      name: "Sona Kumari",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619444/bdlaatw2wiqzf4wa7d1g.jpg",
+      team: "Content Team",
+    },
+    {
+      name: "Raghav Kansal",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619516/lopyknf6i0ubgcycryno.jpg",
+      team: "Design Team",
+    },
+    {
+      name: "Shayamal Tirkey",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619522/mee2k3z4rd0f5ik2ffee.jpg",
+      team: "Design Team",
+    },
+    {
+      name: "Kumar Daksh",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619608/bcod6vm0p2enncntqbsh.webp",
+      team: "Event Team",
+    },
+    {
+      name: "Adib Nawaz",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619702/pe2rlczfu50po26rcpl4.webp",
+      team: "Finance Team",
+    },
+    {
+      name: "Karan Negi",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619704/j5z4wttssv00n2fkrgaq.webp",
+      team: "Finance Team",
+    },
+    {
+      name: "Sachin Parmar",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619709/audroso3kkmmp1d4uenq.jpg",
+      team: "Finance Team",
+    },
+    {
+      name: "Upkar Bharti",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736711754/v8fjvb2osfzq3qaebn3f.jpg ",
+      team: "Finance Team",
+    },
+    {
+      name: "Gayatree Behera",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619791/yqiai0c4vop6cioqjo8s.jpg",
+      team: "Hospitality Team",
+    },
+    {
+      name: "Riyanshi Gupta",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619798/m6hzgtqjcbouucjonorr.jpg",
+      team: "Hospitality Team",
+    },
+    {
+      name: "Mohit Gupta",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619859/salcfakonnwce0chcwyu.jpg",
+      team: "Marketing Team",
+    },
+    {
+      name: "Pragati Jangir",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619863/a3ckh9qmezkinrkbrrux.jpg",
+      team: "Marketing Team",
+    },
+    {
+      name: "Sumit Manchanda",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619865/sish4xzxuutbunoi2dh6.jpg",
+      team: "Marketing Team",
+    },
+    {
+      name: "Tuntun Ganjhu",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620096/yovudaa8tzpzx1p2iion.jpg",
+      team: "Operations and Logistics Team",
+    },
+    {
+      name: "Animesh",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620197/lgbgyv3jewcqjg5nucsc.jpg",
+      team: "Promotion Team",
+    },
+    {
+      name: "Abhinav Aditya",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620261/qvbabiu3ebppxwdsr77p.jpg",
+      team: "Public Relation Team",
+    },
+    {
+      name: "Manthanraj",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620267/oglg1frqjcixa7fzcgy3.jpg",
+      team: "Public Relation Team",
+    },
+    {
+      name: "Tejas",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736707414/d3daasso9wpcpxrlajsr.jpg ",
+      team: "Security Team",
+    },
+    {
+      name: "Vikash Kumar",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620329/nsmkq2cdzg7joo9tbmz6.jpg",
+      team: "Security Team",
+    },
+    {
+      name: "Geetanjali",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736696751/dshtlvgxghcf32i0oimw.jpg",
+      team: "Sponsorship Team",
+    },
+    {
+      name: "Kartik Rahi",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620378/gnyupfr5ym0iybkzc7bh.jpg",
+      team: "Sponsorship Team",
+    },
+    {
+      name: "Manjeet",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620383/hrostggueo3few8yohsu.jpg",
+      team: "Sponsorship Team",
+    },
+    {
+      name: "Rishabh Raj",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620384/g03d8jo7xm8h6jtajm6j.jpg",
+      team: "Sponsorship Team",
     },
   ];
 
@@ -897,7 +949,7 @@ function Team() {
     >
       {/* Leadership Section */}
       <div className="max-w-7xl flex flex-col items-evenly mb-16">
-        <h2 className="text-5xl font-bold text-amber-400 text-center mb-12 tracking-wider">
+        <h2 className="text-7xl  text-amber-400 text-center mb-12 tracking-wider lead">
           Leadership
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
@@ -909,7 +961,7 @@ function Team() {
 
       {/* Core Team Section */}
       <div className="max-w-7xl mx-auto mb-16 flex flex-col items-evenly">
-        <h2 className="text-5xl font-bold text-amber-400 text-center mb-12 tracking-wider">
+        <h2 className="text-5xl font-bold text-amber-400 text-center mb-12 tracking-wider lead">
           Core Team
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -921,7 +973,7 @@ function Team() {
 
       {/* Developers Section */}
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl font-bold text-amber-400 text-center mb-12 tracking-wider">
+        <h2 className="text-5xl font-bold text-amber-400 text-center mb-12 tracking-wider lead">
           Developers
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -11,6 +11,7 @@ import Team from "./components/Team";
 import AboutPage from "./components/About";
 
 import Sponsorships from "./pages/Sponsorships";
+import Events2 from "./pages/Events2";
 function App() {
   return (
     <div>
@@ -20,7 +21,8 @@ function App() {
           <Route path="/" element={<Landingpage />} />
           {/* <Route path="/signup" element={<Signup />} /> */}
           <Route path="/merchandise" element={<Merchandise />} />
-          <Route path="/sponsorships" element={<Sponsorships />} />
+            <Route path="/events2" element={<Events2 />} />
+        <Route path="/sponsorships" element={<Sponsorships />} />
           <Route path="/legion" element={<Team />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/events" element={<Deck />} />
