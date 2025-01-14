@@ -1,4 +1,15 @@
 import { useNavigate } from "react-router-dom";
+import cinema from '../assets/icons/cinema.png';
+import finearts from "../assets/icons/finearts.png";
+import comedy from "../assets/icons/comedy.png";
+import culinary from "../assets/icons/culinary.png";
+import drama from "../assets/icons/drama.png";
+import fashion from "../assets/icons/fashion.png";
+import dance from "../assets/icons/dance.png";
+import music from "../assets/icons/music.png";
+import quiz from "../assets/icons/quiz.png";
+import spades from "../assets/icons/spades-512.png";
+import literary from "../assets/icons/literary.png";
 
 export default function Card({ value, index }) {
   const letters = ["A", "K", "Q"];
@@ -6,6 +17,32 @@ export default function Card({ value, index }) {
   const handleClick = () => {
     navigate("/events2");
   };
+
+  const getImage = () => {
+    switch (value){
+      case "cinema":
+        return cinema;
+      case "finearts":
+        return finearts;
+      case "fashion":
+        return fashion;
+      case "quiz":
+        return quiz;
+      case "music":
+        return music;
+      case "dance":
+        return dance;
+      case "drama":
+        return drama;
+      case "comedy":
+        return comedy;
+      case "culinary":
+        return culinary;
+      case "literary":
+        return literary;
+    }
+  }
+
   return (
     <div
       className="relative w-[300px] h-[420px] rounded-2xl shadow-xl overflow-hidden drop-shadow-2xl"
@@ -25,14 +62,14 @@ export default function Card({ value, index }) {
         {letters[index % 3]}
       </div>
       <div className="absolute top-[67px] left-[30px] text-2xl text-[#8b4513]">
-        <img src="./src/assets/icons/spades-512.png" alt="spade" width={28} />
+        <img src={spades} alt="spade" width={28} />
       </div>
 
       {/* Center Emblem */}
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <div className="relative z-10">
           <img
-            src={`./src/assets/icons/${value}.png`}
+            src={getImage()}
             alt="dance"
             width={180}
           />
@@ -53,7 +90,7 @@ export default function Card({ value, index }) {
         {letters[index % 3]}
       </div>
       <div className="absolute bottom-[67px] right-[30px] text-2xl text-[#8b4513] transform rotate-180">
-        <img src="./src/assets/icons/spades-512.png" alt="spade" width={28} />
+        <img src={spades} alt="spade" width={28} />
       </div>
     </div>
   );
