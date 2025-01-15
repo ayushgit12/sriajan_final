@@ -20,7 +20,7 @@
 }
 
 .animate-walk {
-  animation: walk 30s linear infinite;
+  animation: walk 10s linear infinite;
 }
 
 
@@ -77,3 +77,62 @@
   font-family: 'RomanSmall';
   src: url('./assets/font/KnightsQuest.ttf') format('truetype');
 }
+
+
+/* some  */
+
+
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
+
+  
+@keyframes shine {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 200% 0%;
+  }
+}
+    /* .force-gpu {
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      perspective: 1000px;
+      -webkit-perspective: 1000px;
+    } */
+
+        /* .sponsors-section {
+          padding-bottom: 100px;
+     
+          overflow: visible;
+          
+        }
+    
+       
+        .footer {
+          position: relative;
+          z-index: 10;
+          background-color: #111;
+          color: white;
+          text-align: center;
+          padding: 20px 0;
+        } */
