@@ -12,7 +12,7 @@ import {
   Music,
 } from "lucide-react";
 import logo from "/logo.png"; // Adjust the path if the file is not in the public folder
-import sound from "/sound_squid.mp3";
+import sound from "/sound1.mp3";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -80,18 +80,9 @@ const Navbar = () => {
     return colors[Math.floor(Math.random() * colors.length)];
   };
 
-  const toggleAudio = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
 
   return (
+    
     <nav
       className={`fixed w-full transition-all duration-500 z-50 ${
         !isVisible ? "-translate-y-full" : "translate-y-0"
@@ -115,7 +106,7 @@ const Navbar = () => {
                 onClick={() => (window.location.href = "/")}
                 src={logo}
                 alt="Srijan Logo"
-                className={`h-36 w-40 object-contain transition-all duration-500 ${
+                className={`h-24 w-32 object-contain transition-all duration-500 ${
                   hoverEffect
                     ? `shadow-[0_0_10px_theme(colors.${hoverEffect}.400)]`
                     : "shadow-amber-300"
@@ -141,14 +132,7 @@ const Navbar = () => {
                   <span>{name}</span>
                 </Link>
               ))}
-              {/* Music Toggle Button */}
-              <button
-                onClick={toggleAudio}
-                className="flex items-center px-4 py-2 space-x-2 text-lg font-serif text-amber-200 hover:text-amber-400 transition-all duration-300"
-              >
-                <Music className="w-5 h-5" />
-                <span>{isPlaying ? "Pause Music" : "Play Music"}</span>
-              </button>
+              
             </div>
 
             <div className="md:hidden">

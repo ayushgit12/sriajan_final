@@ -150,7 +150,7 @@ export default function Sponsorships() {
     <div
       className="min-h-screen pt-16 bg-[#f5e6d3]"
       style={{
-        backgroundImage: `url(${bg44})`,
+        backgroundImage: `url(https://i.pinimg.com/474x/03/c8/46/03c8466c1edbcb11c3e321bcf093be05.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

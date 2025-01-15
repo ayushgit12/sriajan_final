@@ -1,76 +1,110 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion"; // Import framer-motion
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import rome from "/paint.jpg";
-import romephone from "/paint_mob3.jpg";
+import romephone from "/mob4.jpeg";
 import logo from "/logo.png";
-import Timer from "./Timer"; // Import the Timer component
+import Timer from "./Timer";
 import ImagesList from "./imagesList";
 import down from "/down.gif";
 import day3 from "/day32.mp4";
 import InfiniteCarousel from "./InfiniteCarousel";
 import diff3 from "/bg23.jpg";
+import sound from "/sound1.mp3";
 
 const Landingpage = () => {
   const [imageSrc, setImageSrc] = useState(rome);
   const [showText, setShowText] = useState(false);
+  const audioRef = useRef(null); // Reference to the audio element
 
+  // Function to play sound
+  const playSound = () => {
+    if (audioRef.current) {
+      audioRef.current
+        .play()
+        .catch((error) => console.warn("Audio playback prevented:", error));
+    }
+  };
+
+  // Smooth scroll to the next section
   const scrollToNextSection = () => {
     window.scrollTo({
       top: window.innerHeight,
-      behavior: "smooth", // Smooth scrolling effect
+      behavior: "smooth",
     });
+    playSound();
   };
 
+  // Handle scrolling logic
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 25) {
+        setShowText(true);
+      }
+      playSound();
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Handle responsive image updates
   useEffect(() => {
     const updateImage = () => {
       const isMobile = window.matchMedia("(max-width: 768px)").matches;
       setImageSrc(isMobile ? romephone : rome);
     };
 
-    // Initial check
     updateImage();
-
-    // Add a listener for window resize
     window.addEventListener("resize", updateImage);
-
-    // Clean up the event listener
     return () => window.removeEventListener("resize", updateImage);
+  }, []);
+
+  // Add event listeners for various interactions to play sound
+  useEffect(() => {
+    const handleInteraction = () => playSound();
+
+    window.addEventListener("click", handleInteraction);
+    window.addEventListener("mousemove", handleInteraction);
+
+    // Autoplay sound on load if allowed by the browser
+    playSound();
+
+    return () => {
+      window.removeEventListener("click", handleInteraction);
+      window.removeEventListener("mousemove", handleInteraction);
+    };
   }, []);
 
   return (
     <div>
-      {/* First Section with Logo */}
+      {/* First Section */}
       <div className="relative bg-black min-h-screen">
         <img
           src={down}
           className="absolute bottom-5 cursor-pointer h-28 z-20 left-1/2 -translate-x-1/2"
-          alt=""
-          onClick={scrollToNextSection} // Add onClick to trigger scrolling
+          alt="Scroll Down"
+          onClick={scrollToNextSection}
         />
-        {/* Center Logo */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
           <div className="w-screen mx-auto flex justify-center">
             <motion.img
-              initial={{ scale: 5, opacity: 0 }} // Start very large and invisible
-              animate={{ scale: 1, opacity: 1 }} // Shrink to final size and become visible
+              initial={{ scale: 5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
               transition={{
-                duration: 3, // Smooth transition over 3 seconds
+                duration: 3,
                 ease: "easeInOut",
-                delay: 0.8, // Delay the animation by 2 seconds
+                delay: 0.8,
               }}
-              className="brightness-[100%] rounded-full md:h-96 h-[250px] w-[600px]"
+              className="brightness-[100%] rounded-full lg:h-96 lg:w-[800px] h-[200px] w-[600px]"
               style={{ filter: "drop-shadow(0 0 10px orange)", zIndex: "1" }}
               src={logo}
               alt="Logo"
               onWheel={(e) => {
-                if (e.deltaY > 0) {
-                  // Detect scroll down and trigger the scroll
-                  scrollToNextSection();
-                }
+                if (e.deltaY > 0) scrollToNextSection();
               }}
+              onMouseEnter={playSound} // Play sound on hover
             />
           </div>
-
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <Timer />
           </motion.div>
@@ -141,17 +175,17 @@ const Landingpage = () => {
         <p className="text-center text-3xl text-amber-900 font-bold pb-4">
           Echoes of Festive Joy from Years Past.
         </p>
-        <video
-          loop={true}
+        {/* <video
+          loop
           controls
-          autoPlay={true}
+          autoPlay
           muted
           className="h-full mx-auto pb-16"
           style={{
-            borderRadius: "4%", // Makes the video fully rounded
+            borderRadius: "4%",
           }}
           src={day3}
-        ></video>
+        ></video> */}
 
         <InfiniteCarousel />
 
@@ -159,6 +193,9 @@ const Landingpage = () => {
           Coming Soon!
         </p>
       </div>
+
+      {/* Background Audio */}
+      <audio ref={audioRef} src={sound} loop />
     </div>
   );
 };

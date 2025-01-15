@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 // import Signup from "./components/signup";
 // import curtains from "/curtains.gif";  // Assuming this is in your public folder
 // import { useState, useEffect } from "react";
-import Card from "./components/test.jsx";
+
 import Deck from "./components/Deck";
 import Merchandise from "./pages/Merchandise";
 import Team from "./components/Team";
@@ -27,7 +27,6 @@ function App() {
           <Route path="/legion" element={<Team />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/events" element={<Deck />} />
-          <Route path="/sp" element={<Card />} />
         </Routes>
         <div className="z-10">
           <Footer />

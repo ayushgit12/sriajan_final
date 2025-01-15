@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Carousel from "../components/Carousel.jsx";
 import logo from "/logo.png";
-import video from "../assets/video2.mp4";
+import video from "../assets/video3.mp4";
 import tshirt from "../assets/tshirt-removebg.png";
 import hoodie from "../assets/hoodie-removebg.png";
 

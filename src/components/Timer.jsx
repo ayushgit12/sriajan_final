@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import ring from "../assets/border.png"
 
 const Timer = () => {
   const targetDate = new Date("2025-01-31T23:59:59");
@@ -55,7 +56,7 @@ const Timer = () => {
         {Object.keys(timeLeft).map((unit, index) => (
           <React.Fragment key={unit}>
             <div
-              className="bg-[#8B4513] text-white rounded-lg p-2 sm:p-4 lg:p-5 w-12 py-2 sm:w-16 md:w-24 text-center shadow-md border border-[#B8860B] hover:shadow-lg hover:shadow-orange-400 transition-shadow duration-300"
+              className="bg-[#8B4513] text-white rounded-lg p-2 sm:p-4 lg:p-5 w-12 py-2 sm:w-16 md:w-24 text-center shadow-md border border-[#B8860B] hover:shadow-lg shadow-orange-400 transition-shadow duration-300"
             >
               <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
                 {formatTime(timeLeft[unit])} {/* Format the time as two digits */}
