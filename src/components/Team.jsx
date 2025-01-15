@@ -130,7 +130,7 @@ function Team() {
     {
       name: "Prof. Madhulika Gupta",
       role: "Co-Convenor",
-      department: "Dept. of Chemistry and Chemial Biology ",
+      department: "Dept. of Chemical Engineering",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708700/aajajntlajkqycwq8k8b.png",
       cardBackground:

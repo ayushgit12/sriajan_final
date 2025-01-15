@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import Card from "./Card";
+import bgev from "/bg2.png";
 
 const cardValues = [
   "music",
@@ -91,13 +92,14 @@ export default function Deck() {
     <div
       style={{
         height: `${totalHeight}px`,
-        backgroundImage: "url(./src/assets/bg2.png)",
+        backgroundImage: `url(${bgev})`,
         backgroundSize: "100% auto",
         backgroundRepeat: "repeat-y",
         backgroundPosition: "center top",
       }}
       className="bg-orange-300 flex items-start justify-center overflow-hidden select-none pt-24"
     >
+      
       <div className="w-full relative">
         {cards.map((value, index) => {
           const { x, y, width, height } = getGridPosition(index);

@@ -17,8 +17,35 @@ import img11 from "/img11.jpeg";
 import img12 from "/img12.jpg";
 import img19 from "/img19.jpeg";
 
+import { useEffect } from "react";
+
 
 export default function ImagesList() {
+
+  const [columns, setColumns] = React.useState(getColumns());
+
+  function getColumns() {
+    const width = window.innerWidth;
+    if (width <= 900) return 2; // 2 columns for mobile
+    // if (width <= 960) return 3; // 3 columns for tablets
+    return 3; // 4 columns for larger screens
+  }
+
+  // Update columns on window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setColumns(getColumns());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  
   return (
     <Box
       sx={{
@@ -31,7 +58,7 @@ export default function ImagesList() {
         padding: "5rem 0",
       }}
     >
-      <ImageList variant="masonry" cols={3} gap={8}>
+      <ImageList variant="masonry" cols={columns} gap={8}>
         {itemData.map((item, index) => (
           <motion.div
             key={item.img}

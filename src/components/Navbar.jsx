@@ -21,7 +21,6 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [hoverEffect, setHoverEffect] = useState("");
-  const [isPlaying, setIsPlaying] = useState(false);
 
   const audioRef = useRef(null);
 

@@ -18,11 +18,12 @@ const Landingpage = () => {
 
   // Function to play sound
   const playSound = () => {
-    if (audioRef.current) {
-      audioRef.current
-        .play()
-        .catch((error) => console.warn("Audio playback prevented:", error));
-    }
+    // if (audioRef.current) {
+    //   audioRef.current
+    //     .play()
+    //     .catch((error) => console.warn("Audio playback prevented:", error));
+    // }
+    localStorage.setItem("music", "on");
   };
 
   // Smooth scroll to the next section
@@ -32,6 +33,7 @@ const Landingpage = () => {
       behavior: "smooth",
     });
     playSound();
+    
   };
 
   // Handle scrolling logic
@@ -41,6 +43,7 @@ const Landingpage = () => {
         setShowText(true);
       }
       playSound();
+      
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -172,9 +175,6 @@ const Landingpage = () => {
 
         <ImagesList />
 
-        <p className="text-center text-3xl text-amber-900 font-bold pb-4">
-          Echoes of Festive Joy from Years Past.
-        </p>
         {/* <video
           loop
           controls
