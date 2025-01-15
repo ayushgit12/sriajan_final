@@ -1,0 +1,250 @@
+const cinemaEvents = [
+  {
+    name: "SRIJAN THROUGH MY LENS",
+    description:
+      "Transform Moments into Art – Srijan is Your Stage, and Photography is Your Voice!”Join our Instagram Story Challenge to capture Srijan’s essence. Embrace the power of photography to express emotions beyond words and stand a chance to win exciting prizes. Let your camera speak, leaving a lasting impression. Seize the moment—your story deserves to be told!",
+    rulebook:
+      "https://docs.google.com/document/d/1iLOyE92hfWbR8b29IGW36EEO_k5uNbhj7hP1fQC3oUo/edit?tab=t.0#heading=h.w0qu0ef6n7hz",
+  },
+  {
+    name: "FOTORUSH",
+    description:
+      " A Time-Based Photography Event is an exciting adventure that combines creativity, teamwork,quick thinking, and seeing the world through a new lens. Decode blurred images, find hidden locations, and recreate stunning frames in a race against time. Capture the thrill in this exciting race.Gear up for a day of fun.",
+    rulebook:
+      "https://docs.google.com/document/d/1o4w0MVRD65_3AfelluMZ4YrvtMTHzma_RFqNBdotPcQ/edit?usp=sharing",
+  },
+  {
+    name: "MANIPULATION WARS",
+    description:
+      "Step into the world of boundless creativity with the Live Photo Manipulation Contest, powered by Adobe Photoshop! Transform a curated set of stock images into a breathtaking masterpiece using only your artistic vision and Photoshop expertise. With no external images allowed, the challenge is to seamlessly blend visuals and craft an inspiring narrative. Push your boundaries, innovate fearlessly, and showcase your imagination and skill under pressure. Are you ready to unleash your creative potential?",
+    rulebook:
+      "https://docs.google.com/document/d/1WUz3yG0R2zqgF5vGfJKts_nPgJtGwMnJ-ktHL7C1B0Q/edit?usp=sharing",
+  },
+  {
+    name: "STORY-TELLER",
+    description:
+      "Lights, camera, creativity! Here's your chance to craft a story that could be the next cinematic hit. Whether it’s a heart-pounding thriller, an inspiring drama, or an unforgettable action-adventure, your narrative could soon be on the big screen. Step into the world of film and create the story that captivates audiences worldwide!",
+    rulebook:
+      "https://docs.google.com/document/d/19Vu3l6jfGxHha4NwOiadqGsOgoOB2UXtzI-TNA9DrUk/edit?usp=drivesdk",
+  },
+  {
+    name: "FRAMES OF SRIJAN",
+    description:
+      "Step into the world of reel making, Frames of srijan invites you to capture the energy, emotions, and magic of Srijan through your lens. Whether it’s behind-the-scenes moments, vibrant performances, or candid expressions, it’s your chance to showcase the festival like never before.Bring your creativity, capture the spark, and create a vlog that tells a story worth watching.",
+    rulebook:
+      "https://docs.google.com/document/d/1sd76AYxzzLanvErm24Rgk_QCBHRJsxw9G6OdDvfymds/edit?usp=drivesdk",
+  },
+  {
+    name: "ONLINE SHORT FILM MAKING COMPETITION",
+    description:
+      "Got a story that can spark emotions, ignite minds, and set screens ablaze? This is your chance to turn your imagination into a cinematic masterpiece! Step into the spotlight, wow the audience. Gear up, grab your cameras, and let your lens do the talking. The journey from imagination to inspiration starts here!",
+    rulebook:
+      "https://docs.google.com/document/d/1Z6xWeqr-qTcdfcLhFz3JR3B6NKje7rkh9KbsMKT5tPk/edit?usp=drivesdk",
+  },
+];
+
+const danceEvents = [
+  {
+    name: "HUSTLE HERD",
+    description:
+      "A group grows through shared experiences, creating a strong sense of unity and belonging. In performances, this teamwork turns moments into lasting memories. Hustle Herd celebrates your effort and encourages amazing dance groups to show their talent. Let’s come together, shine, and share the joy and artistry of dance!",
+    rulebook:
+      "https://docs.google.com/document/d/17G61fu_l-H4P09UXBmSeOv8Qqrns5ea8zc2dLG2zH8w/edit?usp=sharing",
+  },
+  {
+    name: "FOOT LOOSE",
+    description:
+      "The ultimate solo dance showdown awaits! This is a stage for those who believe they can ignite the floor with their fiery moves, leaving the audience mesmerized and rivals watching in awe—and maybe a touch of envy. It's the ultimate quest to crown the greatest dancer, w jihere every step, spin, and leap brings you closer to glory. Are you ready to own the spotlight?",
+    rulebook:
+      "https://docs.google.com/document/d/1p-ELn0z2DK6_MfPbwguuGozIBYMOaUVvFzeFmqcImsU/edit?usp=sharing",
+  },
+  {
+    name: "REFLECTION",
+    description:
+      "Are you and your partner a dynamic duo, moving in perfect harmony? Reflection is the ultimate stage to shine a light on your extraordinary synergy! Seize this incredible opportunity to showcase your combined talent and dazzle the judges. But be warned: the competition will be fierce! Prepare to push your limits, and get ready to dazzle the crowd with your skills.",
+    rulebook:
+      "https://docs.google.com/document/d/1x4L8oQeBVFjeyRYJvIb_obtIjPi0yykUN4A6xEH7xkY/edit?usp=sharing",
+  },
+  {
+    name: "STREET BEATS",
+    description:
+      "Witness the most epic crew battle of the year - Street Beats - Crew Dance Battle! Exciting Judges , Electrifying DJ , Charismatic Emcee , Mind-Blowing Dance Crews Showcase your talent, feel the heat, and let the beats drop!",
+    rulebook:
+      "https://docs.google.com/document/d/1x4L8oQeBVFjeyRYJvIb_obtIjPi0yykUN4A6xEH7xkY/edit?usp=sharing",
+  },
+  {
+    name: "STREET RELOADED",
+    description:
+      "Unleash your inner star as you dive into the world of dance with Street Reloaded - Solo Dance Battle, the ultimate showdown that cranks up the intensity!Whether you're dropping beats in Hip-Hop, Popping, Krumping or breaking barriers in Breaking. Unite as a crew and ignite the floor with your creativity and flair.Step up, own the moment, and let your passion ignite the stage.",
+    rulebook:
+      "https://docs.google.com/document/d/1p5YzgEx6QthXDtXezVl6WK-dBJCX1GnCkCqXY2cEZ9c/edit?usp=sharing",
+  },
+];
+
+const quizEvents = [
+  {
+    name: "MELA QUIZ",
+    description:
+      "Embark on a Journey with the MELA Quiz! Dive into the exhilarating world  of Music, Entertainment, Literature, and Arts .This isn’t just another quiz—it's an adventure that celebrates creativity across cultures and generations. From legendary musicians and unforgettable performances to iconic literary works and groundbreaking art, the MELA Quiz has something for everyone! Let your brains speak and propel you towards victory, this Srijan.",
+    rulebook:
+      "https://docs.google.com/document/d/10HAJ8VkzmGXSeCHTjigajGCahiIaCopO8GJYKeJFNm8/edit",
+  },
+  {
+    name: "GENERAL QUIZ",
+    description:
+      "Calling all trivia enthusiasts and curious minds! Whether you’re a history buff, a science whizz, or a fan of contemporary culture, there’s a challenge waiting just for you. Gather your ultimate trivia team, sharpen your wits, and prepare to compete for glory and amazing prizes!",
+    rulebook:
+      "https://docs.google.com/document/d/10HAJ8VkzmGXSeCHTjigajGCahiIaCopO8GJYKeJFNm8/edit",
+  },
+  {
+    name: "INDIA QUIZ",
+    description:
+      "Step into the vibrant world of Indian queer culture,This engaging quiz will challenge your knowledge of the rich history, significant milestones, and contemporary achievements that define LGBTQ+ experiences throughout the subcontinent. Are you ready to challenge your brain and celebrate the diversity and heritage of India? ",
+    rulebook:
+      "https://docs.google.com/document/d/10HAJ8VkzmGXSeCHTjigajGCahiIaCopO8GJYKeJFNm8/edit",
+  },
+];
+
+const comedyEvents = [
+  {
+    name: "ISM’s GOT LATENT",
+    description:
+      "Welcome to the zany world of “ISM’s Got Latent”, a one-of-a-kind talent show where the bizarre and unexpected take center stage! Inspired by the madness of India’s Got Talent, this is your chance to flaunt those quirky, hidden talents—whether it’s mimicking your over-dramatic pados wali bhabhi, belting out “Bol Na Aunty Aaun Kya”, or pulling off a funky lap dance! It’s all about entertaining the judges and audience with your offbeat skills, no matter how unconventional they are.Step into a rollercoaster of excitement, laughter, and jaw-dropping performances!",
+    rulebook:
+      "https://docs.google.com/document/d/1GiAAgzBSMK9UlnWqcOmUTKfpPypu1NuAwSrwESYR3WI/edit?usp=drivesdk",
+  },
+  {
+    name: "SAANP TANK",
+    description:
+      "Introducing Season 2 of SAANP TANK, the ultimate fusion of entrepreneurship and comedy! In this side-splitting parody of legendary Shark Tank, teams step up to pitch absurd and impossible products to our panel of judges. With creativity leading the way,business meets pure hilarity. Keeping a straight face is not an option. Get ready for a rollercoaster of innovation,humour, staggering pitches in the most unpredictable entrepreneurial showdown!",
+    rulebook:
+      "https://docs.google.com/document/d/1GiAAgzBSMK9UlnWqcOmUTKfpPypu1NuAwSrwESYR3WI/edit?usp=drivesdk",
+  },
+];
+
+const literaryEvents = [
+  {
+    name: "PODFEST",
+    description:
+      "Showcase your creativity and quick thinking at PodFest, SRIJAN 2025, presented by LiveTalksISM. Take on exciting challenges, conquer your fears, and captivate the audience with your words. Be part of the Cultural Caravan, sharing the beauty of diverse cultures through your voice. This is your chance to shine, inspire others, and win exciting prizes at this unforgettable competition!",
+    rulebook:
+      "https://docs.google.com/document/d/1y8l2pu01zlylgdZ7hfc-EV_6MHcM6iRF-Pw4AUNwhX0/edit?usp=sharing",
+  },
+  {
+    name: "SAHITYA MELA",
+    description:
+      "Immerse yourself in the world of literature with this exciting competition that combines creativity, knowledge, and a love for words. From solving intriguing puzzles to showcasing your poetic flair, this event offers a platform to test your literary skills in unique and engaging ways. Whether you’re a fan of writing, poetry, or unravelling challenges, this competition promises an enriching experience filled with fun and creativity.",
+    rulebook:
+      "https://docs.google.com/document/d/1W7FC6_bpz1XPpKk34Jw5k_SSSSnI2NDnL01OkzWK1GM/edit?usp=sharing",
+  },
+  {
+    name: "POETRY SLAM",
+    description:
+      "LITC Club's Poetry Slam was a mesmerizing celebration,the evening began with an inspiring keynote by a renowned poet.The power of poetry as a medium for connection and self - expression leaving everyone inspired,Each slam is a journey through diverse perspectives,It's a stage where heart's unravel and minds ignite.The LITC Poetry Slam is a  reminder that every voice matters and every story inspires!",
+    rulebook:
+      "https://docs.google.com/document/d/10Opn4dQtpX7E7cKLAuOgMnWsXadfVgMMoKQcgV4CClc/edit?usp=sharing",
+  },
+  {
+    name: "THE STORY STITCH",
+    description:
+      "LITC club is a vibrant community,this year we invite you to embark on a journey,It's an Odyssey of self - expression and artistic exploration It's a rhythm of life woven where words are carefully chosen to express the unsaid.Let your imagination flow a creative writing competition where the sky is the limit.So dust off your pens, be there not as a spectator but as the Star of the story.Mark your calendars and let's script history - together!",
+    rulebook:
+      "https://docs.google.com/document/d/1zl5ZYagAdMOak1ZXjemRjj2QS-fYnLnopHh_wreaVVM/edit?usp=sharing",
+  },
+  {
+    name: "POETRY SLAM",
+    description:
+      "LITC Club's Poetry Slam was a mesmerizing celebration,the evening began with an inspiring keynote by a renowned poet.The power of poetry as a medium for connection and self - expression leaving everyone inspired,Each slam is a journey through diverse perspectives,It's a stage where heart's unravel and minds ignite.The LITC Poetry Slam is a  reminder that every voice matters and every story inspires!",
+    rulebook:
+      "https://docs.google.com/document/d/10Opn4dQtpX7E7cKLAuOgMnWsXadfVgMMoKQcgV4CClc/edit?usp=sharing",
+  },
+  {
+    name: "FOLKTWIST",
+    description:
+      'where imagination takes the director’s chair! "Ever dreamed of reshaping a movie’s ending? Here’s your chance to rewrite the script and create cinematic magic. Unleash your creativity, share bold ideas, and craft unforgettable twists with fellow movie enthusiasts. It’s not just an event; it’s your stage to reinvent stories and leave your mark. Join us for this thrilling journey and showcase your skills of storytelling with lots of fun included.',
+    rulebook:
+      "https://docs.google.com/document/d/1E5tZG5ZyULuZ4Ni5lkQbksc4reqHp3UztnglmtHgKQ0/edit?usp=sharing",
+  },
+  {
+    name: "CORPORATE CRISES",
+    description:
+      "Ever encountered a corporate challenge that left you scratching your head? At this event, you'll tackle real-world issues like PR failures or budget constraints, collaborating with your team to propose practical solutions.In this high-energy, interactive session, you'll ruminate, revolutionize, and reignite solutions that will leave a lasting impact. So, are you ready to electrify the boardroom and showcase your inner maverick? Let's gear up for the Pitch Fest Showdown!",
+    rulebook:
+      "https://docs.google.com/document/d/1E5tZG5ZyULuZ4Ni5lkQbksc4reqHp3UztnglmtHgKQ0/edit?usp=sharing",
+  },
+];
+
+const dramaEvents = [
+  {
+    name: "HOONKAAR",
+    description:
+      "Unleash the Roar!Step into a world where passion meets creativity,  With electrifying performances and gripping competitions,Join the revolution, embrace the spirit, and make your voice heard. It is the flagship event of ADC club and a vibrant celebration of innovation and energy, a space where Ideas come alive.Let your roar echo break the silence throughout the  time with Hoonkaar!",
+    rulebook:
+      "https://docs.google.com/document/d/1S9Lx14tSsWSG_QY9Fg1jdEkIVb3picJ0VLyJ5KoSq5I/edit?usp=drivesdk",
+  },
+  {
+    name: "EKABHINAY",
+    description:
+      "Step onto the stage of brilliance with ADC Club’s Ekabhinay, a celebration of solo acting talent!Let your performance echo the rhythm of creativity and flair. Unleash your creativity, performance speaks volume and leaves a lasting impression.One stage, one soul,Infinite Expressions! Let your voice create a magic,Join us and make the stage your canvas – it’s time to own the spotlight!",
+    rulebook:
+      "https://docs.google.com/document/d/1S9Lx14tSsWSG_QY9Fg1jdEkIVb3picJ0VLyJ5KoSq5I/edit?usp=drivesdk",
+  },
+];
+
+const musicEvents = [
+  {
+    name: "Harmony – The Iconic Band Competition",
+    description:
+      "Where music meets magic, and bands become legends! Harmony, the crown jewel of Srijan 2025, invites the most dynamic bands to take the stage and captivate hearts with electrifying performances. It’s not just a competition—it’s a celebration of passion, rhythm, and the power of sound. &nbsp Bring your best, own the spotlight, and leave the audience in awe. In this epic battle of beats and melodies, the stage is yours to conquer. Let the music speak, and let the magic begin!",
+    rulebook:
+      "https://drive.google.com/file/d/1DmHSQHpHcE74tGNt1CiNo_TsQAswrPWf/view?usp=sharing",
+  },
+  {
+    name: "Aaroh – The Solo Singing Showdown",
+    description:
+      "Hey, melodic dreamers! 🎤 Aaroh, the soul-stirring solo singing competition of Srijan 2025, is calling you to shine like never before. Whether you’re a vocal virtuoso or simply love to sing your heart out, this is your stage to own. &nbsp Let your voice take flight, mesmerize the crowd, and turn moments into magic. Aaroh isn’t just a competition—it’s a celebration of passion, music, and the power of your voice. Warm up those vocal cords, step into the spotlight, and let the music speak for you!",
+    rulebook:
+      "https://drive.google.com/file/d/1DmHSQHpHcE74tGNt1CiNo_TsQAswrPWf/view?usp=sharing",
+  },
+];
+
+const fashionEvents = [
+  {
+    name: "PARIDHAAN",
+    description:
+      "PARIDHAAN invites all to step into a world where creativity knows no bounds and imagination takes center stage. Teams will channel their artistic vision into extraordinary costumes and performances, all crafted around a unique theme revealed to organizers before the event. The grand finale, ‘Beauty & Geeks,’ will present an exciting clash of glamour and intellect, where participants will redefine beauty and brains. With limitless creativity, teams will bring this captivating theme to life, blending elegance and intellect in a way that’s both bold and unforgettable.",
+    rulebook:
+      "https://docs.google.com/document/d/1P1-yEQ06TirtvFpZMpLA3JVHWIlRJizuhl82g2XPDus/edit?usp=sharing",
+  },
+  {
+    name: "CAMPUS PRINCESS",
+    description:
+      "Step onto a dynamic stage where your unique aura as a radiant queen in the making takes center stage. This competition celebrates individuality, offering a platform for contestants to showcase their charm, confidence, and self-assurance in a captivating display of talent.",
+    rulebook:
+      "https://docs.google.com/document/d/1jKQ60TKgCP65vH_uSRum0_ApNNB7lHVw7uYf8txMrx4/edit?usp=sharing",
+  },
+];
+
+const fineartsEvents = [
+  {
+    name: "DOODLE DASH",
+    description:
+      "The Art Club of IIT (ISM) Dhanbad invites you to participate in an exciting Doodle Design Challenge. Participants will unleash their creativity by crafting unique doodle designs using ink-based materials , which will be provided on the spot. To add a twist, one or more themes will be announced during the event, encouraging spontaneity and originality.	Watch your creations come alive on ArtFreaks’ Instagram and Facebook pages.",
+    rulebook:
+      "https://docs.google.com/document/d/1Md6wj4qKo6a3CtOGnoRD3UnPUD9fF2dgRHAPoJ4Fhe0/edit?usp=drivesdk",
+  },
+  {
+    name: "LIVE ART",
+    description:
+      "ArtFreaks is bringing art to life like never before with a live, on-the-spot creation session! Forget just admiring finished pieces—this is your chance to step into the world of raw creativity and witness masterpieces being born right before your eyes. Experience the thrill of every brushstroke, every burst of color, and every spark of inspiration as it happens. Dive into the magic of art in motion and be part of something truly unforgettable!",
+    rulebook:
+      "https://docs.google.com/document/d/1Md6wj4qKo6a3CtOGnoRD3UnPUD9fF2dgRHAPoJ4Fhe0/edit?usp=drivesdk",
+  },
+  {
+    name: "FACE PAINTING",
+    description:
+      "Get ready for the ultimate creative showdown in the Face Painting Competition, where teams of two will bring art to life in the most unexpected way! One member will showcase their painting skills by transforming their partner’s face into a canvas. Don’t have your own materials? No problem! We’ll provide everything you need—paints, brushes, cups, and tissues. All that’s left is for you to unleash your imagination and let the colors flow in this fun, fast-paced competition!",
+    rulebook:
+      "https://docs.google.com/document/d/1Md6wj4qKo6a3CtOGnoRD3UnPUD9fF2dgRHAPoJ4Fhe0/edit?usp=drivesdk",
+  },
+];
