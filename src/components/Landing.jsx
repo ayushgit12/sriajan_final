@@ -132,7 +132,7 @@ const Landingpage = () => {
           alt="Rome"
         />
 
-        <style jsx>{`
+        <style>{`
           @keyframes fade-in {
             0% {
               opacity: 0.8;
