@@ -56,8 +56,8 @@ const InfiniteCarousel = () => {
       onMouseEnter={() => setIsHovered(true)} // Pause the carousel on hover
       onMouseLeave={() => setIsHovered(false)} // Resume the carousel when hover ends
     >
-      <p className="text-amber-950 font-bold md:text-4xl text-xl text-center pb-6">
-        Some Visuals from Previous Year
+      <p className="text-amber-950 font-bold md:text-4xl text-xl text-center pb-8">
+      Echoes of Festive Joy from Years Past.
       </p>
       <div
         style={{

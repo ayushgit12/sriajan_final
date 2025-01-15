@@ -172,9 +172,6 @@ const Landingpage = () => {
 
         <ImagesList />
 
-        <p className="text-center text-3xl text-amber-900 font-bold pb-4">
-          Echoes of Festive Joy from Years Past.
-        </p>
         {/* <video
           loop
           controls
