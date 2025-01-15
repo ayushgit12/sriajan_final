@@ -18,11 +18,12 @@ const Landingpage = () => {
 
   // Function to play sound
   const playSound = () => {
-    if (audioRef.current) {
-      audioRef.current
-        .play()
-        .catch((error) => console.warn("Audio playback prevented:", error));
-    }
+    // if (audioRef.current) {
+    //   audioRef.current
+    //     .play()
+    //     .catch((error) => console.warn("Audio playback prevented:", error));
+    // }
+    localStorage.setItem("music", "on");
   };
 
   // Smooth scroll to the next section
@@ -32,6 +33,7 @@ const Landingpage = () => {
       behavior: "smooth",
     });
     playSound();
+    
   };
 
   // Handle scrolling logic
@@ -41,6 +43,7 @@ const Landingpage = () => {
         setShowText(true);
       }
       playSound();
+      
     };
 
     window.addEventListener("scroll", handleScroll);
