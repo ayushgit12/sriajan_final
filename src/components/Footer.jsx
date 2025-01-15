@@ -58,13 +58,13 @@ const Footer = () => {
 
   return (
     <div>
-      <footer className="bg-gradient-to-b from-stone-900 to-amber-950 text-amber-200">
-        <div className="relative overflow-hidden w-full">
-          <div className="camel absolute top-[-102px] left-0 animate-walk">
+      <footer className="bg-gradient-to-b from-stone-900 to-amber-950 text-amber-200 z-10 relative">
+        <div className="relative w-full">
+          <div className="camel absolute top-[-102px] left-0 animate-walk z-50">
             <img
               src="https://media.tenor.com/PBC-LtbDN9IAAAAi/chariot-ride.gif"
               alt="Walking Camel"
-              className="h-[120px] object-contain filter brightness-120 sepia-[0.4] contrast-125 z-50"
+              className="h-[120px] object-contain filter brightness-120 sepia-[0.4] contrast-125 z-50 relative"
             />
           </div>
         </div>
