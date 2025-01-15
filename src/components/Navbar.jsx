@@ -37,12 +37,42 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   const navItems = [
-    { name: "Home", icon: <Crown className="w-5 h-5" />, description: "Return to glory", route: "/" },
-    { name: "Events", icon: <Sword className="w-5 h-5" />, description: "Epic battles await", route: "/events" },
-    { name: "Sponsorships", icon: <HandCoinsIcon className="w-6 h-6" />, description: "Empowered and amplified by the brands", route: "/sponsorships" },
-    { name: "Legion", icon: <Users className="w-5 h-5" />, description: "Community behind this", route: "/legion" },
-    { name: "Merchandise", icon: <Flame className="w-5 h-5" />, description: "Pillars of the festival", route: "/merchandise" },
-    { name: "About", icon: <BookOpenText className="w-5 h-5" />, description: "De Novis", route: "/about" },
+    {
+      name: "Home",
+      icon: <Crown className="w-5 h-5" />,
+      description: "Return to glory",
+      route: "/",
+    },
+    {
+      name: "Events",
+      icon: <Sword className="w-5 h-5" />,
+      description: "Epic battles await",
+      route: "/events",
+    },
+    {
+      name: "Sponsorships",
+      icon: <HandCoinsIcon className="w-6 h-6" />,
+      description: "Empowered and amplified by the brands",
+      route: "/sponsorships",
+    },
+    {
+      name: "Legion",
+      icon: <Users className="w-5 h-5" />,
+      description: "Community behind this",
+      route: "/legion",
+    },
+    {
+      name: "Merchandise",
+      icon: <Flame className="w-5 h-5" />,
+      description: "Pillars of the festival",
+      route: "/merchandise",
+    },
+    {
+      name: "About",
+      icon: <BookOpenText className="w-5 h-5" />,
+      description: "De Novis",
+      route: "/about",
+    },
   ];
 
   const generateRandomGlowColor = () => {
@@ -126,7 +156,11 @@ const Navbar = () => {
                 onClick={() => setIsOpen(!isOpen)}
                 className="relative inline-flex items-center justify-center p-2 rounded-md text-amber-300 hover:text-amber-400 focus:outline-none transform transition-all duration-300 hover:scale-110 hover:rotate-180"
               >
-                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
               </button>
             </div>
           </div>
