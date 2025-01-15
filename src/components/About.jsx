@@ -12,10 +12,9 @@ const AboutPage = () => {
       {/* Text Content Styled Like Ancient Script */}
       <div className="text-center max-w-4xl sm:px-2 lg:px-6">
         <h2
-          className=" mb-8  pt-32 lg:pt-28  text-5xl sm:text-7xl md:text-7xl lg:text-[100px]"
+          className=" mb-8  pt-32 lg:pt-28  text-6xl sm:text-7xl md:text-7xl lg:text-[100px]"
           style={{
-            // fontSize: "100px",
-            color: "#3b3024", // Dark brown for ancient feel
+            color: "#3b3024",
             fontFamily: "RomanFont", // Ancient-style font
             textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)", // Subtle shadow for depth
           }}
@@ -23,7 +22,7 @@ const AboutPage = () => {
           Institute Legacy
         </h2>
         <p
-          className="text-3xl font-semibold leading-relaxed mb-6 brightness-125"
+          className="text-3xl font-semibold leading-relaxed mb-6 brightness-125 px-4" 
           style={{
             color: "#3b3024", // Matches the title for consistency
             fontFamily: "RomanSmall", // Elegant ancient-style font
