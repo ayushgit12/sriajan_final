@@ -45,14 +45,13 @@
 
     0%,
     100% {
-        box-shadow: 0 0 15px rgba(218, 211, 165, 0.3);
-        border-color: rgba(218, 211, 165, 0.6);
+        box-shadow: 0 0 15px rgb(255, 215, 0);
+        border-color: rgba(255, 215, 0, 0.6);
     }
 
     50% {
-        box-shadow: 0 0 30px rgba(218, 211, 165, 0.6),
-            0 0 60px rgba(218, 211, 165, 0.3);
-        border-color: rgba(218, 211, 165, 0.9);
+    box-shadow: 0 0 15px rgb(255, 215, 0);
+        border-color: rgba(255, 215, 0, 0.6);
     }
 }
 
