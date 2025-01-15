@@ -43,7 +43,7 @@ const Footer = () => {
           to: "mailto:srijan@iitism.ac.in",
         },
         {
-          name: "1234567890",
+          name: "+91 90241 24738",
           icon: <Phone className="w-4 h-4" />,
         },
         {
