@@ -470,19 +470,22 @@ function Team() {
   ];
   //https://i.pinimg.com/736x/45/c9/d3/45c9d356d30a0dfead45c47463fa3612.jpg
   return (
-    <div
-      className="min-h-screen pt-28 p-8 flex flex-col items-center"
-      style={{
-        backgroundImage:
-          'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://i.pinimg.com/736x/45/c9/d3/45c9d356d30a0dfead45c47463fa3612.jpg")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-      }}
-    >
+    <div className="min-h-screen pt-28 p-8 flex flex-col items-center relative">
+      <div
+        className="absolute top-0 left-0 w-full h-full"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://i.pinimg.com/736x/45/c9/d3/45c9d356d30a0dfead45c47463fa3612.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          position: "fixed",
+          zIndex: -1,
+        }}
+      ></div>
+
       {/* Leadership Section */}
       <div className="max-w-7xl flex flex-col items-evenly mb-16">
-        <h2 className="text-7xl  text-amber-400 text-center mb-12 tracking-wider lead">
+        <h2 className="text-7xl text-amber-400 text-center mb-12 tracking-wider lead">
           Leadership
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
