@@ -18,7 +18,7 @@ const MerchandisePage = () => {
         autoPlay
         loop
         muted
-        className="absolute inset-0 object-cover w-full h-full z-0"
+        className="absolute inset-0 object-cover w-full h-full z-0 pointer-events-none"
       >
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
@@ -26,7 +26,7 @@ const MerchandisePage = () => {
 
       {/* Content overlay */}
       <div className="relative z-10 w-screen brightness-[100%] flex flex-col min-h-screen">
-        <header className="flex justify-center py-5">
+        <header className="flex justify-center py-5 opacity-0">
           <img src={logo} alt="Logo" className="h-12 md:h-16" />
         </header>
 
