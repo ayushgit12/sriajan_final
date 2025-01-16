@@ -59,7 +59,7 @@ const Footer = () => {
   return (
     <div>
       <footer className="bg-gradient-to-b from-stone-900 to-amber-950 text-amber-200 z-10 relative">
-        <div className="relative w-full">
+        {/* <div className="relative w-full">
           <div className="camel absolute top-[-102px] left-0 animate-walk z-50">
             <img
               src={camel}
@@ -67,7 +67,7 @@ const Footer = () => {
               className="h-[120px] object-contain filter brightness-120 sepia-[0.4] contrast-125 z-50 relative"
             />
           </div>
-        </div>
+        </div> */}
         <div className="h-1 bg-gradient-to-r from-amber-400 via-red-500 to-amber-400" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">

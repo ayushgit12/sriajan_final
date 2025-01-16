@@ -193,11 +193,12 @@ const SponsorCard = ({ sponsor, index, tier }) => {
 
   return (
     <motion.div
+      class="card"
       ref={ref}
       variants={cardVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="perspective-1000"
+      className="perspective-1000  transform-origin:center"
       onHoverStart={() => setIsFlipped(true)}
       onHoverEnd={() => setIsFlipped(false)}
       onTouchStart={handleTouchStart}
@@ -207,6 +208,7 @@ const SponsorCard = ({ sponsor, index, tier }) => {
         className="relative w-full h-[400px] preserve-3d cursor-pointer"
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.6 }}
+        style={{ transformOrigin: "center center" }}
       >
         {/* Front of card */}
         <div className="absolute w-[300px] h-[100px] backface-hidden ">
@@ -300,7 +302,7 @@ export default function App() {
         <AnimatePresence>
           {mounted && (
             <motion.div
-              className="text-center mb-16"
+              className="text-center mb-16 transform-origin:center"
               variants={headerVariants}
               initial="hidden"
               animate="visible"
