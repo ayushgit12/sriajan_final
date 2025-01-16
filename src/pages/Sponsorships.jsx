@@ -177,6 +177,7 @@ const SponsorCard = ({ sponsor, index, tier }) => {
       y: 50,
       scale: 0.9,
       rotateY: -15,
+      transformOrigin: "center center",
     },
     visible: {
       opacity: 1,
@@ -313,11 +314,11 @@ export default function App() {
                 whileHover={{ scale: 1.1, rotate: 360 }}
                 transition={{ duration: 0.8 }}
               >
-                <Building2 className="h-12 w-12 text-[#8B4513]" />
+                {/* <Building2 className="h-12 w-12 text-[#8B4513]" /> */}
               </motion.div>
 
               <motion.h1
-                className="text-3xl font-bold text-[#8B4513] sm:text-6xl mb-2"
+                className="text-3xl font-bold text-[#8B4513] sm:text-6xl mb-2 mt-16"
                 style={{ fontFamily: "'MedievalSharp', serif" }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
