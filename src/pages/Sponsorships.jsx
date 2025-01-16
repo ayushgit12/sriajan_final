@@ -209,16 +209,16 @@ const SponsorCard = ({ sponsor, index, tier }) => {
         transition={{ duration: 0.6 }}
       >
         {/* Front of card */}
-        <div className="absolute w-full h-full backface-hidden ">
+        <div className="absolute w-[300px] h-[100px] backface-hidden ">
           <div
             className={`h-full rounded-xl shadow-2xl transform transition-all duration-500 hover:scale-105 border-2 ${getBorderColor(tier)}`}
           >
-            <div className="relative h-full overflow-hidden rounded-xl">
+            <div className="relative h-[300px] overflow-hidden rounded-xl">
               <motion.img
                 src={sponsor.image}
                 alt={sponsor.name}
-                className="w-full h-full object-fit"
-                initial={{ scale: 1.2 }}
+                className="w-[300px] h-[300px] object-fit"
+                initial={{ scale: 1 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.5 }}
               />
@@ -241,7 +241,7 @@ const SponsorCard = ({ sponsor, index, tier }) => {
 
         {/* Back of card */}
         <div
-          className="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl shadow-2xl overflow-hidden"
+          className="absolute w-[300px] h-[300px] backface-hidden rotate-y-180 rounded-xl shadow-2xl overflow-hidden"
           style={{
             backgroundImage: `url(${getMetallicBackground(tier)})`,
             // backgroundImage: `url('https://t3.ftcdn.net/jpg/08/88/59/26/360_F_888592671_ttZvsKBo90wvhHYfCDiUalxBoE40de5C.jpg')`,
@@ -355,7 +355,7 @@ export default function App() {
             </motion.h2>
 
             <div
-              className={`grid grid-cols-1 sm:grid-cols-2 ${tier == "Gold" ? "lg:grid-cols-2" : "lg:grid-cols-3"} gap-8`}
+              className={`grid grid-cols-1 sm:grid-cols-2 ${tier == "Gold" ? "lg:grid-cols-4" : "lg:grid-cols-3"} gap-8`}
             >
               {sponsors
                 .filter((sponsor) => sponsor.tier === tier)

@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import logo from "/logo.png"; // Adjust the path if the file is not in the public folder
 import sound from "/sound1.mp3";
-
+import camel from "../../public/random.gif";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -79,9 +79,7 @@ const Navbar = () => {
     return colors[Math.floor(Math.random() * colors.length)];
   };
 
-
   return (
-    
     <nav
       className={`fixed w-full transition-all duration-500 z-50 ${
         !isVisible ? "-translate-y-full" : "translate-y-0"
@@ -91,6 +89,15 @@ const Navbar = () => {
           : "bg-gradient-to-r from-amber-800 to-red-900"
       }`}
     >
+      <div className="absolute  w-full">
+        <div className="camel relative   left-0 animate-walk z-50">
+          <img
+            src={camel}
+            alt="Walking Camel"
+            className="h-[100px]  object-contain filter brightness-120 sepia-[0.4] contrast-125 z-50 relative"
+          />
+        </div>
+      </div>
       <div className="relative">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 via-red-500 to-amber-400" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -131,7 +138,6 @@ const Navbar = () => {
                   <span>{name}</span>
                 </Link>
               ))}
-              
             </div>
 
             <div className="md:hidden">

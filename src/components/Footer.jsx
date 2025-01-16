@@ -11,7 +11,7 @@ import {
   Phone,
 } from "lucide-react";
 import logo from "../../public/logo.png";
-
+import camel from "../../public/random.gif";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -62,7 +62,7 @@ const Footer = () => {
         <div className="relative w-full">
           <div className="camel absolute top-[-102px] left-0 animate-walk z-50">
             <img
-              src="https://media.tenor.com/PBC-LtbDN9IAAAAi/chariot-ride.gif"
+              src={camel}
               alt="Walking Camel"
               className="h-[120px] object-contain filter brightness-120 sepia-[0.4] contrast-125 z-50 relative"
             />
