@@ -1,4 +1,4 @@
-const cinemaEvents = [
+export const cinemaEvents = [
   {
     name: "SRIJAN THROUGH MY LENS",
     registerLink: 'https://unstop.com/o/Sas8ti1?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl',
@@ -49,7 +49,7 @@ const cinemaEvents = [
   },
 ];
 
-const danceEvents = [
+export const danceEvents = [
   {
     name: "HUSTLE HERD",
     registerLink: 'https://unstop.com/o/YKcwjRM?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl',
@@ -92,7 +92,7 @@ const danceEvents = [
   },
 ];
 
-const quizEvents = [
+export const quizEvents = [
   {
     name: "MELA QUIZ",
     registerLink: 'https://unstop.com/o/NSeGyTr?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl',
@@ -119,7 +119,7 @@ const quizEvents = [
   },
 ];
 
-const comedyEvents = [
+export const comedyEvents = [
   {
     name: "ISM’s GOT LATENT",
     registerLink: 'https://unstop.com/o/vuWSgE2?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl',
@@ -138,7 +138,7 @@ const comedyEvents = [
   },
 ];
 
-const literaryEvents = [
+export const literaryEvents = [
   {
     name: "PODFEST",
     registerLink: 'https://unstop.com/o/3Lutxkp?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl',
@@ -197,7 +197,7 @@ const literaryEvents = [
   },
 ];
 
-const dramaEvents = [
+export const dramaEvents = [
   {
     name: "HOONKAAR",
     registerLink: 'https://unstop.com/o/z5jQyid?lb=R7BCeSFa&utm_medium=Share&utm_source=shortUrl',
@@ -216,7 +216,7 @@ const dramaEvents = [
   },
 ];
 
-const musicEvents = [
+export const musicEvents = [
   {
     name: "Harmony – The Iconic Band Competition",
     registerLink: 'https://unstop.com/o/SqAzNZo?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl',
@@ -235,7 +235,7 @@ const musicEvents = [
   },
 ];
 
-const fashionEvents = [
+export const fashionEvents = [
   {
     name: "PARIDHAAN",
     registerLink: 'https://unstop.com/o/Z64Bls1?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl',
@@ -254,7 +254,7 @@ const fashionEvents = [
   },
 ];
 
-const fineartsEvents = [
+export const fineartsEvents = [
   {
     name: "DOODLE DASH",
     registerLink: 'https://unstop.com/o/mA5q02X?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl',

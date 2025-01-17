@@ -112,7 +112,7 @@ function Team() {
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708702/tndurhwxcbbttytnmlnr.png",
       cardBackground:
-        "https://i.pinimg.com/474x/f2/d8/7f/f2d87f4aea5eac67b67ab1b60aa117fb.jpg",
+        "https://i.pinimg.com/474x/03/c8/46/03c8466c1edbcb11c3e321bcf093be05.jpg",
       linkedin: "#",
       instagram: "#",
     },
@@ -141,9 +141,9 @@ function Team() {
     {
       name: `\u00A0\u00A0\u00A0\u00A0\u00A0Prof.\u00A0\u00A0Ashok\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Kumar`,
       role: "Treasurer",
-      department: "\u00A0\u00A0\u00A0\u00A0\u00A0Dept. of Mining Engineering",
+      department: "Dept. of Electrical Engineering",
       image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708697/ozwxkxowhknkdrwzn1sh.png",
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737122320/arqps0eqwjvvvjveaxxy.jpg",
       cardBackground:
         "https://i.pinimg.com/474x/03/c8/46/03c8466c1edbcb11c3e321bcf093be05.jpg",
       linkedin: "#",
@@ -213,12 +213,20 @@ function Team() {
       team: "Technical Team",
     },
     {
+      name: "Shubham Saurav",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620461/flc0zraard9sc9vvz6qs.jpg",
+      team: "Technical Team",
+    },
+    {
       name: "Siddharth Aggrawal",
       department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736707406/g4kufwfd4ubuwttbtu3d.jpg ",
       team: "Technical Team",
     },
+
     {
       name: "Divya Gupta",
       department: "Co-Head",
@@ -226,12 +234,13 @@ function Team() {
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620457/zdkp2uvyhosodedbjgxd.jpg",
       team: "Technical Team",
     },
+
     {
-      name: "Shubham Saurav",
+      name: "Shreya Shradha",
       department: "Head",
       image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620461/flc0zraard9sc9vvz6qs.jpg",
-      team: "Technical Team",
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619441/rhvswo06qrp2d7va5cry.jpg",
+      team: "Content Team",
     },
     {
       name: "Dheeraj",
@@ -240,13 +249,7 @@ function Team() {
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619432/yuv7ukrg36mskyrlogyd.jpg",
       team: "Content Team",
     },
-    {
-      name: "Shreya Shradha",
-      department: "Head",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619441/rhvswo06qrp2d7va5cry.jpg",
-      team: "Content Team",
-    },
+
     {
       name: "Sona Kumari",
       department: "Co-Head",
@@ -276,17 +279,25 @@ function Team() {
       team: "Event Team",
     },
     {
-      name: "Adib Nawaz",
-      department: "Co-Head",
+      name: "Upkar Bharti",
+      department: "Head",
       image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619702/pe2rlczfu50po26rcpl4.webp",
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736711754/v8fjvb2osfzq3qaebn3f.jpg ",
       team: "Finance Team",
     },
+
     {
       name: "Karan Negi",
       department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619704/j5z4wttssv00n2fkrgaq.webp",
+      team: "Finance Team",
+    },
+    {
+      name: "Adib Nawaz",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619702/pe2rlczfu50po26rcpl4.webp",
       team: "Finance Team",
     },
     {
@@ -296,13 +307,7 @@ function Team() {
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619709/audroso3kkmmp1d4uenq.jpg",
       team: "Finance Team",
     },
-    {
-      name: "Upkar Bharti",
-      department: "Head",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736711754/v8fjvb2osfzq3qaebn3f.jpg ",
-      team: "Finance Team",
-    },
+
     {
       name: "Gayatree Behera",
       department: "Co-Head",
@@ -318,6 +323,13 @@ function Team() {
       team: "Hospitality Team",
     },
     {
+      name: "Sumit Manchanda",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619865/sish4xzxuutbunoi2dh6.jpg",
+      team: "Marketing Team",
+    },
+    {
       name: "Mohit Gupta",
       department: "Co-Head",
       image:
@@ -331,13 +343,7 @@ function Team() {
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619863/a3ckh9qmezkinrkbrrux.jpg",
       team: "Marketing Team",
     },
-    {
-      name: "Sumit Manchanda",
-      department: "Head",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619865/sish4xzxuutbunoi2dh6.jpg",
-      team: "Marketing Team",
-    },
+
     {
       name: "Tuntun Ganjhu",
       department: "Co-Head",
@@ -367,6 +373,13 @@ function Team() {
       team: "Public Relation Team",
     },
     {
+      name: "Vikash Kumar",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620329/nsmkq2cdzg7joo9tbmz6.jpg",
+      team: "Security Team",
+    },
+    {
       name: "Tejas",
       department: "Co-Head",
       image:
@@ -374,11 +387,11 @@ function Team() {
       team: "Security Team",
     },
     {
-      name: "Vikash Kumar",
+      name: "Rishabh Raj",
       department: "Head",
       image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620329/nsmkq2cdzg7joo9tbmz6.jpg",
-      team: "Security Team",
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620384/g03d8jo7xm8h6jtajm6j.jpg",
+      team: "Sponsorship Team",
     },
     {
       name: "Geetanjali",
@@ -399,13 +412,6 @@ function Team() {
       department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620383/hrostggueo3few8yohsu.jpg",
-      team: "Sponsorship Team",
-    },
-    {
-      name: "Rishabh Raj",
-      department: "Head",
-      image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620384/g03d8jo7xm8h6jtajm6j.jpg",
       team: "Sponsorship Team",
     },
   ];
