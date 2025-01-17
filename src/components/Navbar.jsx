@@ -89,12 +89,12 @@ const Navbar = () => {
           : "bg-gradient-to-r from-amber-800 to-red-900"
       }`}
     >
-      <div className="absolute  w-full">
-        <div className="camel relative   left-0 animate-walk z-50">
+      <div className="absolute  w-36">
+        <div className="camel relative   left-0 animate-walk z-0">
           <img
             src={camel}
             alt="Walking Camel"
-            className="h-[100px]  object-contain filter brightness-120 sepia-[0.4] contrast-125 z-50 relative"
+            className="h-[100px]  w-fit object-contain filter brightness-120 sepia-[0.4] contrast-125 z-50 relative"
           />
         </div>
       </div>
@@ -104,7 +104,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div
-              className="flex-shrink-0 flex items-center group cursor-pointer"
+              className="flex-shrink-0 w-fit flex items-center group cursor-pointer"
               onMouseEnter={() => setHoverEffect(generateRandomGlowColor())}
               onMouseLeave={() => setHoverEffect("")}
             >
@@ -148,7 +148,7 @@ const Navbar = () => {
                 {isOpen ? (
                   <X className="h-6 w-6" />
                 ) : (
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-6 w-6 z-50" />
                 )}
               </button>
             </div>
