@@ -214,7 +214,7 @@ const SponsorCard = ({ sponsor, index, tier }) => {
         {/* Front of card */}
         <div className="absolute w-[300px] h-[100px] backface-hidden ">
           <div
-            className={`h-full rounded-xl shadow-2xl transform transition-all duration-500 hover:scale-105 border-2 ${getBorderColor(tier)}`}
+            className={`h-[305px] w-[305px] flex justify-center items-center rounded-xl shadow-2xl transform transition-all duration-500 hover:scale-105 border-0 ${getBorderColor(tier)}`}
           >
             <div className="relative flex justify-center h-[300px] overflow-hidden rounded-xl">
               <motion.img
@@ -269,13 +269,13 @@ const SponsorCard = ({ sponsor, index, tier }) => {
 const getBorderColor = (tier) => {
   switch (tier) {
     case "Gold":
-      return "border-amber-400";
+      return "bg-amber-400";
     case "Silver":
-      return "border-gray-400";
+      return "bg-gray-400";
     case "Bronze":
-      return "border-orange-700";
+      return "bg-orange-700";
     default:
-      return "border-gray-400";
+      return "bg-gray-400";
   }
 };
 
@@ -364,7 +364,7 @@ export default function App() {
             </motion.h2>
 
             <div
-              className={`grid grid-cols-1 sm:grid-cols-2 px-[8vw] ${tier == "Gold" ? "lg:grid-cols-4" : "lg:grid-cols-3"} lg:px-0 gap-8`}
+              className={`grid grid-cols-1 sm:grid-cols-2 px-[8vw] ${tier == "Gold" ? "lg:grid-cols-4" : "lg:grid-cols-3"} lg:px-0 gap-14`}
             >
               {sponsors
                 .filter((sponsor) => sponsor.tier === tier)
