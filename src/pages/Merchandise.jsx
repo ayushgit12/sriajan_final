@@ -15,6 +15,7 @@ const MerchandisePage = () => {
     <div className="relative bg-black text-white min-h-screen font-roman">
       {/* Video background */}
       <video
+        controls={false}
         autoPlay
         loop
         muted

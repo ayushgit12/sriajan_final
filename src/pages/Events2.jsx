@@ -5,6 +5,7 @@ const Events2 = () => {
   return (
     <div className="relative bg-black text-white min-h-screen font-roman">
       <video
+        controls={false}
         autoPlay
         loop
         muted
@@ -19,10 +20,10 @@ const Events2 = () => {
           style={{
             fontFamily: "RomanSmall",
             color: "#f09005",
-            fontSize: "14vw", 
-            lineHeight: "1.1", 
+            fontSize: "14vw",
+            lineHeight: "1.1",
             cursor: "pointer",
-            opacity:0.75,
+            opacity: 0.75,
           }}
         >
           Coming Soon
