@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 // import curtains from "/curtains.gif";  // Assuming this is in your public folder
 // import { useState, useEffect } from "react";
 import { useRef, useEffect } from "react";
+import EventsRegisterPage from "./pages/EventsRegisterPage.jsx";
 
 import Deck from "./components/Deck";
 import Merchandise from "./pages/Merchandise";
@@ -55,6 +56,7 @@ function App() {
           <Route path="/legion" element={<Team />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/events" element={<Deck />} />
+          <Route path="/events/:category" element={<EventsRegisterPage />} />
         </Routes>
         <div className="z-10">
           <Footer />

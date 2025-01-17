@@ -78,6 +78,10 @@
   src: url('./assets/font/KnightsQuest.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'ChalkDuster';
+  src: url('./assets/font/Chalkduster.ttf') format('truetype');
+}
 
 /* some  */
 
