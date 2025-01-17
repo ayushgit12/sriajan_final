@@ -8,7 +8,7 @@ const Events2 = () => {
         autoPlay
         loop
         muted
-        className="absolute brightness-50 inset-0 object-cover w-full h-full z-0"
+        className="absolute brightness-50 inset-0 object-cover w-full h-full z-0 pointer-events-none"
       >
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
