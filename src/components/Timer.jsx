@@ -72,7 +72,7 @@ const Timer = () => {
               <div className="absolute inset-0 bg-amber-500 rounded-lg blur-md group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-30" />
               <motion.div
                 className="bg-gradient-to-b from-[#8B4513] to-[#654321] text-amber-100 
-                           rounded-lg p-2 w-10 py-2 sm:w-14 md:w-20 
+                           rounded-lg p-2 w-16 py-4 sm:w-16 md:w-20 
                            text-center relative overflow-hidden
                            border-2 border-[#DAA520] group-hover:border-amber-400
                            transition-all duration-300"
