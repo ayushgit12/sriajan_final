@@ -94,7 +94,8 @@ const Navbar = () => {
           <img
             src={camel}
             alt="Walking Camel"
-            className="h-[100px]  w-fit object-contain filter brightness-120 sepia-[0.4] contrast-125 z-50 relative"
+            className="h-[100px]  w-fit object-contain filter brightness-120 sepia-[0.4] contrast-125 z-50 relative "
+            draggable="false"
           />
         </div>
       </div>

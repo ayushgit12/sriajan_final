@@ -6,7 +6,6 @@ import logo from "/logo.png";
 import Timer from "./Timer";
 import ImagesList from "./imagesList";
 import down from "/down.gif";
-import day3 from "/day32.mp4";
 import InfiniteCarousel from "./InfiniteCarousel";
 import diff3 from "/bg23.jpg";
 import sound from "/sound1.mp3";
@@ -112,7 +111,7 @@ const Landingpage = () => {
             <Timer />
           </motion.div>
           <p
-            className={`text-center mt-8 text-white font-semibold md:text-4xl transition-opacity duration-500 ${
+            className={`text-center mt-8 text-white font-semibold md:text-4xl transition-opacity duration-500 text-2xl ${
               showText ? "opacity-100" : "opacity-0"
             }`}
             style={{
