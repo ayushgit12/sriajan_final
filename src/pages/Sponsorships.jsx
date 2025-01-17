@@ -177,6 +177,7 @@ const SponsorCard = ({ sponsor, index, tier }) => {
       y: 50,
       scale: 0.9,
       rotateY: -15,
+      transformOrigin: "center center",
     },
     visible: {
       opacity: 1,

@@ -94,7 +94,7 @@ const Navbar = () => {
           <img
             src={camel}
             alt="Walking Camel"
-            className="h-[100px]  object-contain filter brightness-120 sepia-[0.4] contrast-125 z-50 relative"
+            className="h-[100px]  w-fit object-contain filter brightness-120 sepia-[0.4] contrast-125 z-50 relative"
           />
         </div>
       </div>
@@ -104,7 +104,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div
-              className="flex-shrink-0 flex items-center group cursor-pointer"
+              className="flex-shrink-0 w-fit flex items-center group cursor-pointer"
               onMouseEnter={() => setHoverEffect(generateRandomGlowColor())}
               onMouseLeave={() => setHoverEffect("")}
             >
