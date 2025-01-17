@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import ring from "../assets/border.png";
 
 const Timer = () => {
   const targetDate = new Date("2025-01-31T23:59:59");

@@ -11,7 +11,7 @@ import {
   Phone,
 } from "lucide-react";
 import logo from "../../public/logo.png";
-import camel from "../../public/random.gif";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 

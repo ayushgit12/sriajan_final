@@ -102,7 +102,7 @@ function TeamMemberCard({
     </div>
   );
 }
-
+//. https://res.cloudinary.com/dwqgih2ka/image/upload/v1737132869/vizkxgzg2iuehkrwudh9.jpg
 function Team() {
   const leadership = [
     {
@@ -139,11 +139,22 @@ function Team() {
       instagram: "#",
     },
     {
-      name: `\u00A0\u00A0\u00A0\u00A0\u00A0Prof.\u00A0\u00A0Ashok\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Kumar`,
+      name: `Prof. Ashok Kumar`,
       role: "Treasurer",
       department: "Dept. of Electrical Engineering",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737122320/arqps0eqwjvvvjveaxxy.jpg",
+      cardBackground:
+        "https://i.pinimg.com/474x/03/c8/46/03c8466c1edbcb11c3e321bcf093be05.jpg",
+      linkedin: "#",
+      instagram: "#",
+    },
+    {
+      name: "Prof. Shivam Raj",
+      role: "President",
+      department: "Dept. of Petroleum Engineering ",
+      image:
+        "https://res.cloudinary.com/dwqgih2ka/image/upload/v1737132869/vizkxgzg2iuehkrwudh9.jpg",
       cardBackground:
         "https://i.pinimg.com/474x/03/c8/46/03c8466c1edbcb11c3e321bcf093be05.jpg",
       linkedin: "#",
@@ -494,7 +505,7 @@ function Team() {
         <h2 className="text-7xl text-amber-400 text-center mb-12 tracking-wider lead">
           Leadership
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full place-items-center">
           {leadership.map((member, index) => (
             <TeamMemberCard key={index} {...member} />
           ))}

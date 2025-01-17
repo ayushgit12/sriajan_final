@@ -9,7 +9,6 @@ import {
   Crown,
   HandCoinsIcon,
   BookOpenText,
-  Music,
 } from "lucide-react";
 import logo from "/logo.png"; // Adjust the path if the file is not in the public folder
 import sound from "/sound1.mp3";

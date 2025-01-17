@@ -1,8 +1,7 @@
 import React from "react";
 import "./EventCard.css";
-import bg from "../assets/building.jpg"
-// import bg from "../../../assets/sun-tornado.png";
-// import img from "../../../assets/image 43.png";
+import bg from "../assets/building.jpg";
+
 import { Link } from "react-router-dom";
 
 const Card = ({ index, event }) => {
@@ -37,7 +36,11 @@ const Card = ({ index, event }) => {
         <div className="front0">
           <div
             className="img0 bg-cover"
-            style={{ backgroundImage: `url(${bg})`, objectFit: "contain" ,objectPosition: 'bottom'}}
+            style={{
+              backgroundImage: `url(${bg})`,
+              objectFit: "contain",
+              objectPosition: "bottom",
+            }}
           >
             <div className="circle0"></div>
             <div className="circle0" id="right"></div>

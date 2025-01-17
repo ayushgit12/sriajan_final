@@ -6,7 +6,7 @@ import logo from "/logo.png";
 import Timer from "./Timer";
 import ImagesList from "./imagesList";
 import down from "/down.gif";
-import day3 from "/day32.mp4";
+
 import InfiniteCarousel from "./InfiniteCarousel";
 import diff3 from "/bg23.jpg";
 import sound from "/sound1.mp3";
@@ -33,7 +33,6 @@ const Landingpage = () => {
       behavior: "smooth",
     });
     playSound();
-    
   };
 
   // Handle scrolling logic
@@ -43,7 +42,6 @@ const Landingpage = () => {
         setShowText(true);
       }
       playSound();
-      
     };
 
     window.addEventListener("scroll", handleScroll);

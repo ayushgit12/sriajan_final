@@ -2,9 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Landingpage from "./components/Landing";
 import Footer from "./components/Footer";
-// import Signup from "./components/signup";
-// import curtains from "/curtains.gif";  // Assuming this is in your public folder
-// import { useState, useEffect } from "react";
+
 import { useRef, useEffect } from "react";
 import EventsRegisterPage from "./pages/EventsRegisterPage.jsx";
 
@@ -30,18 +28,18 @@ function App() {
       }
     };
 
-      // Start playing audio on load
-      playAudio();
+    // Start playing audio on load
+    playAudio();
 
-      // Add event listeners for user interactions to start audio
-      window.addEventListener("click", playAudio);
-      window.addEventListener("mousemove", playAudio);
-  
-      return () => {
-        window.removeEventListener("click", playAudio);
-        window.removeEventListener("mousemove", playAudio);
-      };
-    }, []);
+    // Add event listeners for user interactions to start audio
+    window.addEventListener("click", playAudio);
+    window.addEventListener("mousemove", playAudio);
+
+    return () => {
+      window.removeEventListener("click", playAudio);
+      window.removeEventListener("mousemove", playAudio);
+    };
+  }, []);
 
   return (
     <div>

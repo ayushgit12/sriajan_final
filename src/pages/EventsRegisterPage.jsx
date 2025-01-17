@@ -13,9 +13,8 @@ import {
   fineartsEvents,
 } from "../utils/events.js";
 import { useParams } from "react-router-dom";
-import bg from "../assets/bg.jpg";
-import video from "../assets/video4.mp4"
-
+//import bg from "../assets/bg.jpg";
+import video from "../assets/video4.mp4";
 
 const getEventData = (category) => {
   switch (category) {
@@ -45,15 +44,13 @@ const EventsRegisterPage = () => {
 
   console.log(Events);
   return (
-    <div
-      className="py-40"
-    >
+    <div className="py-40">
       <video
         autoPlay
         loop
         muted
         className="fixed brightness-50 inset-0 object-cover w-full h-full z-0"
-        style={{height: "190%"}}
+        style={{ height: "190%" }}
       >
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
