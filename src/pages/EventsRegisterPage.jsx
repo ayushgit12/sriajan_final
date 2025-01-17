@@ -64,7 +64,7 @@ const EventsRegisterPage = () => {
       >
         {category.toUpperCase()}
       </h1>
-      <div className="flex flex-col items-center h-auto px-8 lg:flex-row lg:px-24 py-40 gap-24 lg:flex-wrap lg:justify-center overflow-y-auto">
+      <div className="flex flex-col items-center h-auto px-8 lg:flex-row lg:px-24 py-40 gap-24 lg:flex-wrap lg:justify-center overflow-y-none">
         {Events?.map((event, idx) => (
           <EventCard key={idx} index={idx} event={event} />
         ))}

@@ -112,7 +112,7 @@ function Team() {
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708702/tndurhwxcbbttytnmlnr.png",
       cardBackground:
-        "https://i.pinimg.com/474x/f2/d8/7f/f2d87f4aea5eac67b67ab1b60aa117fb.jpg",
+        "https://i.pinimg.com/474x/03/c8/46/03c8466c1edbcb11c3e321bcf093be05.jpg",
       linkedin: "#",
       instagram: "#",
     },
@@ -141,9 +141,9 @@ function Team() {
     {
       name: `\u00A0\u00A0\u00A0\u00A0\u00A0Prof.\u00A0\u00A0Ashok\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Kumar`,
       role: "Treasurer",
-      department: "\u00A0\u00A0\u00A0\u00A0\u00A0Dept. of Mining Engineering",
+      department: "Dept. of Electrical Engineering",
       image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708697/ozwxkxowhknkdrwzn1sh.png",
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737122320/arqps0eqwjvvvjveaxxy.jpg",
       cardBackground:
         "https://i.pinimg.com/474x/03/c8/46/03c8466c1edbcb11c3e321bcf093be05.jpg",
       linkedin: "#",
