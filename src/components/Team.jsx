@@ -150,7 +150,7 @@ function Team() {
       instagram: "#",
     },
     {
-      name: "Prof. Shivam Raj",
+      name: "Shivam\u00A0\u00A0 Raj",
       role: "President",
       department: "Dept. of Petroleum Engineering ",
       image:
