@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const AccomodationPage = () => {
   return (
     <div
-      className="h-[100vh] w-[100vw] pt-20 relative flex  flex-col items-center"
+      className="min-h-screen w-[100vw] pt-20 relative flex  flex-col items-center"
       style={{
         backgroundImage: `url(${back})`,
         backgroundPosition: "center",

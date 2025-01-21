@@ -305,7 +305,7 @@ function Team() {
       name: "Anant Sagar",
       department: "Head",
       image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737462551/tbf16ai8cnuztsglixsm.jpg",
+        "https://res.cloudinary.com/dtqazflod/image/upload/v1737478842/IMG_0412_fzeenv.jpg",
       team: "Operations and Logistics Team",
     },
     {
