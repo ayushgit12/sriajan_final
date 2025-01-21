@@ -53,7 +53,7 @@ const Timer = () => {
           fontSize: "clamp(1.5rem, 2.5vw, 2.5rem)",
         }}
       >
-        Countdown to the Roman Revelry
+        Countdown to the Srijan Centenary spark
       </h1>
       <div className="poppins flex md:gap-4 gap-2 justify-center">
         {Object.keys(timeLeft).map((unit, index) => (
