@@ -160,6 +160,17 @@ function Team() {
       linkedin: "#",
       instagram: "#",
     },
+    {
+      name: "Shubham\u00A0\u00A0 Prakash",
+      role: "General Secretary(Cultural)",
+      department: "Dept. of Mechanical Engineering ",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737464790/ngsginpojcdrk5lvraub.jpg",
+      cardBackground:
+        "https://i.pinimg.com/474x/03/c8/46/03c8466c1edbcb11c3e321bcf093be05.jpg",
+      linkedin: "#",
+      instagram: "#",
+    },
 
     // Add other leadership members with similar structure
   ];
@@ -179,6 +190,13 @@ function Team() {
       department: "Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736618571/kvkffp9mi7ueco7gqzja.jpg",
+      team: "Advisor",
+    },
+    {
+      name: "Aman Chaudhary",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737464781/gehvuewy9glbo8ldnn0n.jpg",
       team: "Advisor",
     },
 
@@ -283,10 +301,24 @@ function Team() {
       team: "Design Team",
     },
     {
+      name: "Sunny Kumar",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737464791/lkiwxhwomchovovlu0mo.jpg",
+      team: "Event Team",
+    },
+    {
       name: "Kumar Daksh",
       department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619608/bcod6vm0p2enncntqbsh.webp",
+      team: "Event Team",
+    },
+    {
+      name: "Ayush Babukumar",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737462552/x0wfa1bziegxzszjwuza.jpg",
       team: "Event Team",
     },
     {
@@ -320,6 +352,13 @@ function Team() {
     },
 
     {
+      name: "Manish Kumar",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737464783/ywqttbuaxwuysta3y9xc.jpg",
+      team: "Hospitality Team",
+    },
+    {
       name: "Gayatree Behera",
       department: "Co-Head",
       image:
@@ -331,6 +370,13 @@ function Team() {
       department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619798/m6hzgtqjcbouucjonorr.jpg",
+      team: "Hospitality Team",
+    },
+    {
+      name: "Sarvesh Bhatia",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737462556/qz7ffs9fbb51qtrwavpc.jpg",
       team: "Hospitality Team",
     },
     {
@@ -356,6 +402,13 @@ function Team() {
     },
 
     {
+      name: "Anant Sagar",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737462551/tbf16ai8cnuztsglixsm.jpg",
+      team: "Operations and Logistics Team",
+    },
+    {
       name: "Tuntun Ganjhu",
       department: "Co-Head",
       image:
@@ -363,11 +416,39 @@ function Team() {
       team: "Operations and Logistics Team",
     },
     {
+      name: "Prajesh Anand",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737464785/qiznj6sgfm5r0sznlzof.jpg",
+      team: "Operations and Logistics Team",
+    },
+    {
+      name: "Prerna Lala",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737464786/n9fgfit9mqyakoqujewi.jpg",
+      team: "Promotion Team",
+    },
+    {
       name: "Animesh",
       department: "Co-Head",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620197/lgbgyv3jewcqjg5nucsc.jpg",
       team: "Promotion Team",
+    },
+    {
+      name: "Ankan Biswas",
+      department: "Co-Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737464782/gpigyuodo2vgkpifuo1d.jpg",
+      team: "Promotion Team",
+    },
+    {
+      name: "Aditya Jaiswal",
+      department: "Head",
+      image:
+        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737464780/nfn8uw0evvisgqc3g8hb.jpg",
+      team: "Public Relation Team",
     },
     {
       name: "Abhinav Aditya",
