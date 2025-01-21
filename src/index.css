@@ -82,6 +82,10 @@
   font-family: 'ChalkDuster';
   src: url('./assets/font/Chalkduster.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Embolism';
+  src: url('./assets/font/EmbolismSpark.ttf') format('truetype');
+}
 
 /* some  */
 
