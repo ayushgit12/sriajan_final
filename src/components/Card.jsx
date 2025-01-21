@@ -11,6 +11,7 @@ import quiz from "../assets/icons/quiz.png";
 import spades from "../assets/icons/spades-512.png";
 import literary from "../assets/icons/literary.png";
 
+
 export default function Card({ value, index }) {
   const letters = ["A", "K", "Q"];
   const navigate = useNavigate();
