@@ -6,7 +6,7 @@ function DevTeamMemberCard({
   name,
   role,
   image,
-  cardBackground = "https://i.pinimg.com/474x/03/c8/46/03c8466c1edbcb11c3e321bcf093be05.jpg",
+  cardBackground = "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737472506/f7x3ftcypxfuhwnx1pul.jpg",
   department,
   linkedin,
   instagram,
@@ -60,7 +60,7 @@ function DevTeamMemberCard({
             backgroundImage: `url(${cardBackground})`,
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80" />
+          <div  />
         </div>
 
         <div className="animated-border" />
@@ -81,7 +81,7 @@ function DevTeamMemberCard({
         </div>
 
         <div className="relative z-10 p-6 h-full flex flex-col items-center justify-center">
-          <div className="image-container mb-6 relative">
+          <div className="image-container mb-6 relative rounded-full">
             <div className="absolute inset-0 bg-amber-400/20 rounded-full animate-pulse" />
             <img
               src={image}

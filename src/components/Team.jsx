@@ -444,8 +444,8 @@ function Team() {
       department: "\u00A0",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736700743/tyvgurspkf1wskssihco.jpg",
-      linkedin: "#",
-      instagram: "#",
+      linkedin: "www.linkedin.com/in/yugkaliraman",
+      instagram: "https://www.instagram.com/yug.kaliraman?igsh=aDl6Y3R4ZmllaDZx&utm_source=qr",
     },
     {
       name: "Samarth Jindal ",
@@ -453,8 +453,8 @@ function Team() {
       department: "\u00A0",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736696754/xz6o3qdrme4vj2t9bpko.jpg",
-      linkedin: "#",
-      instagram: "#",
+      linkedin: "https://www.linkedin.com/in/samarth-jindal-1129a01b8/",
+      instagram: "https://www.instagram.com/samarth__jindal/",
     },
     {
       name: "Aaradhy jain ",
@@ -462,8 +462,8 @@ function Team() {
       department: "\u00A0",
       image:
         "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736772822/m0ltyinckju9ksti1sbj.jpg",
-      linkedin: "#",
-      instagram: "#",
+      linkedin: "https://www.linkedin.com/in/aaradhy-jain",
+      instagram: "https://www.instagram.com/aaradhyjain_?igsh=MnZ1N3ViejgzcHY5",
     },
   ];
   //https://i.pinimg.com/736x/45/c9/d3/45c9d356d30a0dfead45c47463fa3612.jpg
