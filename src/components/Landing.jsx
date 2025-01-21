@@ -184,6 +184,8 @@ const Landingpage = () => {
           src={day3}
         ></video> */}
 
+
+
         <InfiniteCarousel />
 
         <p className="text-center md:text-6xl text-amber-950 font-bold text-3xl py-16">

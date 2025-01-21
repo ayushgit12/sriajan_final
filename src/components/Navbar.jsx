@@ -9,6 +9,7 @@ import {
   Crown,
   HandCoinsIcon,
   BookOpenText,
+  ArmchairIcon,
 } from "lucide-react";
 import logo from "/logo.png"; // Adjust the path if the file is not in the public folder
 import sound from "/sound1.mp3";
@@ -36,12 +37,6 @@ const Navbar = () => {
 
   const navItems = [
     {
-      name: "Home",
-      icon: <Crown className="w-5 h-5" />,
-      description: "Return to glory",
-      route: "/",
-    },
-    {
       name: "Events",
       icon: <Sword className="w-5 h-5" />,
       description: "Epic battles await",
@@ -64,6 +59,12 @@ const Navbar = () => {
       icon: <Flame className="w-5 h-5" />,
       description: "Pillars of the festival",
       route: "/merchandise",
+    },
+    {
+      name: "Accomodation",
+      icon: <ArmchairIcon className="w-5 h-5" />,
+      description: "Rest and recharge",
+      route: "/accomodation",
     },
     {
       name: "About",

@@ -1,5 +1,5 @@
 import React from "react";
-import back from "../assets/col.jpg";
+import back from "../assets/col2.jpg";
 import { Link } from "react-router-dom";
 
 const AccomodationPage = () => {
@@ -22,12 +22,12 @@ const AccomodationPage = () => {
         }}
       ></div>
       <h1
-        className="text-5xl lg:text-6xl text-center relative z-10 text-amber-950"
+        className="text-5xl lg:text-6xl text-center mt-12 relative z-10 text-amber-950"
         style={{ fontFamily: "RomanFont"}}
       >
         Accomodation
       </h1>
-      <p className="relative z-10 text-center text-white text-md lg:text-4xl px-8 mt-2 lg:px-36 lg:mt-4" style={{fontFamily: "Embolism", lineHeight: "1.5"}}>
+      <p className="relative z-10 text-center text-white text-xl lg:text-4xl px-8 mt-2 lg:px-36 lg:mt-4" style={{fontFamily: "Embolism", lineHeight: "1.5"}}>
         Whether you're a solo traveler or part of a group, we offer various room
         configurations to suit your needs, from single chambers to shared
         suites. Each accommodation comes equipped with essential amenities,
@@ -41,7 +41,7 @@ const AccomodationPage = () => {
         reservations to ensure your place in our cultural celebration.  
       </p>
       <Link className="active:scale-90" to={"https://docs.google.com/forms/d/11PZl9jbWWTXepK054LV0SVd_YqMyn5JbGKvNP3_JysI/edit "} target="_blank">
-      <button className="relative z-10 bg-amber-500 px-4 py-2 rounded-md mt-8 text-lg" style={{fontFamily: 'RomanSmall'}}>Book Now</button>
+      <button className="relative z-10 bg-amber-500 px-4 py-2 rounded-md mt-8 text-3xl" style={{fontFamily: 'RomanSmall'}}>Book Now</button>
       </Link>
     </div>
   );

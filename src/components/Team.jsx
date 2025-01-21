@@ -113,7 +113,7 @@ function Team() {
       name: "Aditya",
       department: "Head",
       image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736711751/lm0zq26felvb9c8qnuab.jpg",
+        "https://res.cloudinary.com/dtqazflod/image/upload/v1737475876/WhatsApp_Image_2025-01-21_at_21.39.00_z5nq2k.jpg",
       // cardBackground:
       //   "https://i.pinimg.com/474x/f2/d8/7f/f2d87f4aea5eac67b67ab1b60aa117fb.jpg",
       team: "Coordinator",
@@ -225,7 +225,7 @@ function Team() {
       name: "Upkar Bharti",
       department: "Head",
       image:
-        "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736711754/v8fjvb2osfzq3qaebn3f.jpg ",
+        "https://res.cloudinary.com/dtqazflod/image/upload/v1737475995/WhatsApp_Image_2025-01-21_at_21.40.58_uz5uda.jpg",
       team: "Finance Team",
     },
 
